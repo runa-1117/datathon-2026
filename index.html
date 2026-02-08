@@ -14,9 +14,8 @@
       <div class="top__title"> 7th DubsTech Datathon </div>
       <nav class="top__nav">
         <a href="#top">Home</a>
-        <a href="#ml">Machine Learning</a>
         <a href="#viz">Visualization</a>
-        <a href="#analysis">Analysis</a>
+        <a href="#ml">Machine Learning</a>
       </nav>
     </div>
   </header>
@@ -54,6 +53,123 @@
       <div class="scroll-hint">
         <span class="scroll-hint__text">Scroll to explore</span>
         <div class="scroll-hint__arrow">&#8595;</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visualization -->
+  <section class="section section--tint" id="viz">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">1</span>
+        <h2>Analytics & Visualization</h2>
+      </div>
+
+      <div class="analysis-stack">
+        <div class="analysis-item">
+          <h3 class="analysis-item__label">Question</h3>
+          <p>Identify areas at the intersection of <strong>high pollution</strong> and <strong>vulnerable populations</strong></p>
+        </div>
+        <div class="analysis-item">
+          <h3 class="analysis-item__label">What we found</h3>
+          <ul>
+            <li>
+              <strong>PM2.5 Shows Strong Correlation with Vulnerable Populations</strong><br>
+              Counties with high breast cancer mortality are disproportionately exposed to elevated PM2.5 levels. Texas leads with 14 counties facing both risks, followed by Indiana (12), Washington (11), and Ohio (11). This pattern is concentrated in industrial corridors and urban centers.
+            </li>
+            <li>
+              <strong>NO₂ Impact is Limited and Urban-Focused</strong><br>
+              Only 3 states show overlap between NO₂ exposure and breast cancer mortality (Texas: 6, Georgia: 1, California: 1). This stark difference reflects NO₂'s primary source—traffic emissions—which creates a clear urban-rural divide in exposure patterns.
+            </li>
+            <li>
+              <strong>Geographic Inequity Reveals Structural Problems</strong><br>
+              The overlap isn't random. High-risk counties cluster in petrochemical regions (Texas Gulf Coast), manufacturing hubs (Midwest), and areas with poor air quality infrastructure. Communities already dealing with cancer are systematically exposed to worse environmental conditions.
+            </li>
+            <li>
+              <strong>PM2.5's Broader Sources Make It a Greater Threat</strong><br>
+              Unlike NO₂, PM2.5 comes from multiple sources: industrial emissions, wildfires, and vehicle exhaust. This means it affects both urban and rural populations, making it harder to avoid and creating widespread exposure for vulnerable groups.
+            </li>
+          </ul>
+        </div>
+        <div class="analysis-item">
+          <h3 class="analysis-item__label">Why it matters</h3>
+          <p>This isn't just about air quality—it's about environmental justice. Communities with the highest breast cancer burden are getting hit twice: once by disease, and again by pollution. Counties in industrial areas like Texas and Indiana face compounded health risks that current regulations don't address. We need targeted action: stricter emission controls in high-risk areas, better health resources for polluted counties, and policies that actually protect the people most at risk. Right now, the counties that need the cleanest air are breathing the dirtiest.</p>
+        </div>
+      </div>
+
+      <!-- Tableau Embed -->
+      <div class="viz">
+        <div class='tableauPlaceholder' id='viz1770544851800' style='position: relative'>
+          <noscript><a href='#'><img alt='Dashboard 1' src='https://public.tableau.com/static/images/da/datathon2026-dashboard2/Dashboard1/1_rss.png' style='border: none' /></a></noscript>
+          <object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='datathon2026-dashboard2/Dashboard1' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https://public.tableau.com/static/images/da/datathon2026-dashboard2/Dashboard1/1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='zh-CN' />
+            <param name='filter' value='publish=yes' />
+          </object>
+        </div>
+        <script type='text/javascript'>
+          var divElement = document.getElementById('viz1770544851800');
+          var vizElement = divElement.getElementsByTagName('object')[0];
+          if (divElement.offsetWidth > 800) {
+            vizElement.style.width = '100%';
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+          } else if (divElement.offsetWidth > 500) {
+            vizElement.style.width = '100%';
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+          } else {
+            vizElement.style.width = '100%';
+            vizElement.style.height = '1477px';
+          }
+          var scriptElement = document.createElement('script');
+          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+          vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visualization 2 -->
+  <section class="section" id="viz2">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">2</span>
+        <h2>Analytics & Visualization</h2>
+      </div>
+
+      <div class="analysis-stack">
+        <div class="analysis-item">
+          <h3 class="analysis-item__label">Question</h3>
+          <p>[Your second analysis question here]</p>
+        </div>
+        <div class="analysis-item">
+          <h3 class="analysis-item__label">What we found</h3>
+          <ul>
+            <li><strong>[Finding title]</strong><br>[Finding description]</li>
+          </ul>
+        </div>
+        <div class="analysis-item">
+          <h3 class="analysis-item__label">Why it matters</h3>
+          <p>[Explanation here]</p>
+        </div>
+      </div>
+
+      <!-- Tableau Embed 2 -->
+      <div class="viz">
+        <div class="viz__placeholder">
+          <p><strong>[Second Tableau dashboard goes here]</strong></p>
+          <p class="muted">Replace this block with the Tableau iframe when ready.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -180,59 +296,6 @@
           Gray areas show places with limited EPA monitoring, highlighting gaps in available data.
         </p>
       </div>
-    </div>
-  </section>
-
-
-
-  <!-- Visualization -->
-  <section class="section" id="viz">
-    <div class="container">
-      <h2>Visualization</h2>
-      <p class="muted">
-        [1–2 sentences: what users should look for in the dashboard + how to interact (filters).]
-      </p>
-
-      <!-- Tableau Embed Placeholder -->
-      <div class="viz">
-        <div class="viz__placeholder">
-          <p><strong>[Tableau dashboard goes here]</strong></p>
-          <p class="muted">Replace this block with the Tableau iframe when ready.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Analysis -->
-  <section class="section section--tint" id="analysis">
-    <div class="container">
-      <h2>Analysis</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Question</h3>
-          <p class="muted">
-            How does air quality vary by <strong>region</strong>, <strong>urbanicity</strong>, or <strong>proximity to industrial areas</strong>?
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>What we found</h3>
-          <ul>
-            <li>[Finding #1: region pattern, quantified]</li>
-            <li>[Finding #2: urban vs rural pattern]</li>
-            <li>[Finding #3: industrial proximity / pollutant-specific pattern]</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Why it matters</h3>
-          <p class="muted">
-            balabala
-          </p>
-        </div>
-      </div>
-
     </div>
   </section>
 
