@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <!-- Top bar (minimal) -->
+  <!-- Top bar -->
   <header class="top">
     <div class="container top__inner">
       <div class="top__title"> 7th DubsTech Datathon </div>
@@ -26,7 +26,7 @@
       <div class="hero-badge">DubsTech Datathon 2026</div>
       <h1>Access to a <span class="hero-accent">Livable Planet</span></h1>
       <p class="lead">
-        <span class="callout">Who gets clean air, safe water, and a stable future?</span>
+        <span class="callout">Who gets clean air, and who bears the burden of pollution?</span>
       </p>
       <p class="hero-desc">
         Using EPA AQI data, we apply machine learning and data visualization to uncover hidden air quality risk patterns across U.S. counties.
@@ -36,7 +36,7 @@
         <div class="kpi__card kpi__card--problem">
           <div class="kpi__icon">&#x26A0;</div>
           <div class="kpi__label">Problem</div>
-          <div class="kpi__value">Unequal exposure to unhealthy air across U.S. communities</div>
+          <div class="kpi__value">Persistent regional disparities in air pollution, with climate threats reversing decades of progress</div>
         </div>
         <div class="kpi__card kpi__card--approach">
           <div class="kpi__icon">&#x2699;</div>
@@ -46,7 +46,7 @@
         <div class="kpi__card kpi__card--outcome">
           <div class="kpi__icon">&#x1F4CD;</div>
           <div class="kpi__label">Outcome</div>
-          <div class="kpi__value">Identify high-risk regions and pollution regimes</div>
+          <div class="kpi__value">Classified U.S. counties into 4 air quality types and predicted 2026 high-risk areas</div>
         </div>
       </div>
 
@@ -68,14 +68,22 @@
       <div class="analysis-stack">
         <div class="analysis-item">
           <h3 class="analysis-item__label">Question</h3>
-          <p>How does air quality vary by region, urbanicity, or proximity to industrial areas?</p>
+          <p>How does air quality vary by region?</p>
         </div>
-        <div class="analysis-item">
-          <h3 class="analysis-item__label">What we found</h3>
-          <ul>
-            <li><strong>[Finding title]</strong><br>[Finding description]</li>
-          </ul>
-        </div>
+      </div>
+
+      <div class="analysis-findings">
+        <h3>What we found</h3>
+        <ul>
+          <li><strong>Regional Inequity Persists</strong><br>
+            Western/coastal counties face consistently higher pollution, while the Midwest achieved near-zero by 2010. Within states, local hotspots remain despite national averages improving.</li>
+          <li><strong>Urban and Industrial Corridors Bear Disproportionate Burden</strong><br>
+            Counties with high traffic density (NO₂) and industrial activity (PM2.5) show overlapping pollution exposure. Metro areas and manufacturing hubs experience multi-pollutant challenges that rural regions largely avoid.</li>
+          <li><strong>Federal Policy Delivers, Then Plateaus</strong><br>
+            The 1990 Clean Air Act cut unhealthy days by 80%, but post-2015 gains stalled. We've tackled industrial emissions—now face harder challenges like wildfires and agriculture.</li>
+          <li><strong>Climate Threats Reversing Progress</strong><br>
+            The West's 2020–2021 wildfire-driven spike shows traditional pollution controls can't address climate-driven air quality challenges. New policy approaches needed.</li>
+        </ul>
       </div>
 
       <div class="viz">
@@ -131,19 +139,20 @@
           <h3 class="analysis-item__label">Question</h3>
           <p>Visualize trends over time in AQI: identify improving or worsening regions</p>
         </div>
-        <div class="analysis-item">
-          <h3 class="analysis-item__label">What we found</h3>
-          <ul>
-            <li><strong>Overall Improvement Since Clean Air Act Amendments (1990)</strong><br>
-              All U.S. regions show significant declines in unhealthy air quality days since 1990, when the Clean Air Act Amendments were implemented. The national average dropped from over 5% unhealthy days in the early 1980s to under 1% by 2025. This demonstrates the effectiveness of federal environmental regulation.</li>
-            <li><strong>Midwest Success Story vs. Persistent Coastal Challenges</strong><br>
-              The Midwest achieved near-zero unhealthy days by 2010 and maintained it, while the Northeast and West still hover around 0.5–1%. This gap likely reflects coastal urbanization, traffic density, and (for the West) wildfires—factors requiring targeted interventions.</li>
-            <li><strong>Regional Patterns Reveal Persistent Disparities</strong><br>
-              Despite nationwide progress, regional differences remain entrenched. Coastal and western regions face unique pollution sources that federal-level policies alone cannot fully address.</li>
-            <li><strong>Recent Stagnation Raises Concerns</strong><br>
-              Post-2015, all regions converge near 0–0.5% unhealthy days, but improvement has slowed. The West's recent uptick (likely from wildfires) suggests climate change may reverse gains in some regions. Current policies designed for industrial pollution may not adequately address new threats like wildfire smoke.</li>
-          </ul>
-        </div>
+      </div>
+
+      <div class="analysis-findings">
+        <h3>What we found</h3>
+        <ul>
+          <li><strong>Overall Improvement Since Clean Air Act Amendments (1990)</strong><br>
+            All U.S. regions show significant declines in unhealthy air quality days since 1990, when the Clean Air Act Amendments were implemented. The national average dropped from over 5% unhealthy days in the early 1980s to under 1% by 2025. This demonstrates the effectiveness of federal environmental regulation.</li>
+          <li><strong>Midwest Success Story vs. Persistent Coastal Challenges</strong><br>
+            The Midwest achieved near-zero unhealthy days by 2010 and maintained it, while the Northeast and West still hover around 0.5–1%. This gap likely reflects coastal urbanization, traffic density, and (for the West) wildfires—factors requiring targeted interventions.</li>
+          <li><strong>Regional Patterns Reveal Persistent Disparities</strong><br>
+            Despite nationwide progress, regional differences remain entrenched. Coastal and western regions face unique pollution sources that federal-level policies alone cannot fully address.</li>
+          <li><strong>Recent Stagnation Raises Concerns</strong><br>
+            Post-2015, all regions converge near 0–0.5% unhealthy days, but improvement has slowed. The West's recent uptick (likely from wildfires) suggests climate change may reverse gains in some regions. Current policies designed for industrial pollution may not adequately address new threats like wildfire smoke.</li>
+        </ul>
       </div>
 
       <div class="viz">
@@ -199,17 +208,18 @@
           <h3 class="analysis-item__label">Question</h3>
           <p>Compare exposure to specific pollutants (PM2.5, Ozone, NO₂) across counties</p>
         </div>
-        <div class="analysis-item">
-          <h3 class="analysis-item__label">What we found</h3>
-          <ul>
-            <li><strong>Ozone is the Most Widespread Threat</strong><br>
-              Nationally, ozone exposure days (~150K) far exceed PM2.5 and NO₂, making it the most pervasive air quality challenge. Unlike traffic-related NO₂, ozone affects both urban and rural counties.</li>
-            <li><strong>California and the Midwest Face Multi-Pollutant Burdens</strong><br>
-              High-exposure counties (red/orange on map) cluster in California/Southwest (wildfires, urban density) and Midwest industrial corridors. These regions face overlapping PM2.5, ozone, and NO₂ exposure—compounding health risks.</li>
-            <li><strong>County-Level Disparities Reveal Structural Inequity</strong><br>
-              The color gradient shows extreme variation: some counties experience 100+ exposure days while others have near-zero. High-exposure areas align with industrial zones, traffic corridors, and wildfire-prone regions—creating systematic environmental disadvantages.</li>
-          </ul>
-        </div>
+      </div>
+
+      <div class="analysis-findings">
+        <h3>What we found</h3>
+        <ul>
+          <li><strong>Ozone is the Most Widespread Threat</strong><br>
+            Nationally, ozone exposure days (~150K) far exceed PM2.5 and NO₂, making it the most pervasive air quality challenge. Unlike traffic-related NO₂, ozone affects both urban and rural counties.</li>
+          <li><strong>California and the Midwest Face Multi-Pollutant Burdens</strong><br>
+            High-exposure counties (red/orange on map) cluster in California/Southwest (wildfires, urban density) and Midwest industrial corridors. These regions face overlapping PM2.5, ozone, and NO₂ exposure—compounding health risks.</li>
+          <li><strong>County-Level Disparities Reveal Structural Inequity</strong><br>
+            The color gradient shows extreme variation: some counties experience 100+ exposure days while others have near-zero. High-exposure areas align with industrial zones, traffic corridors, and wildfire-prone regions—creating systematic environmental disadvantages.</li>
+        </ul>
       </div>
 
       <div class="viz">
@@ -265,27 +275,28 @@
           <h3 class="analysis-item__label">Question</h3>
           <p>Identify areas at the intersection of high pollution and vulnerable populations</p>
         </div>
-        <div class="analysis-item">
-          <h3 class="analysis-item__label">What we found</h3>
-          <ul>
-            <li>
-              <strong>PM2.5 Shows Strong Correlation with Vulnerable Populations</strong><br>
-              Counties with high breast cancer mortality are disproportionately exposed to elevated PM2.5 levels. Texas leads with 14 counties facing both risks, followed by Indiana (12), Washington (11), and Ohio (11). This pattern is concentrated in industrial corridors and urban centers.
-            </li>
-            <li>
-              <strong>NO₂ Impact is Limited and Urban-Focused</strong><br>
-              Only 3 states show overlap between NO₂ exposure and breast cancer mortality (Texas: 6, Georgia: 1, California: 1). This stark difference reflects NO₂'s primary source—traffic emissions—which creates a clear urban-rural divide in exposure patterns.
-            </li>
-            <li>
-              <strong>Geographic Inequity Reveals Structural Problems</strong><br>
-              The overlap isn't random. High-risk counties cluster in petrochemical regions (Texas Gulf Coast), manufacturing hubs (Midwest), and areas with poor air quality infrastructure. Communities already dealing with cancer are systematically exposed to worse environmental conditions.
-            </li>
-            <li>
-              <strong>PM2.5's Broader Sources Make It a Greater Threat</strong><br>
-              Unlike NO₂, PM2.5 comes from multiple sources: industrial emissions, wildfires, and vehicle exhaust. This means it affects both urban and rural populations, making it harder to avoid and creating widespread exposure for vulnerable groups.
-            </li>
-          </ul>
-        </div>
+      </div>
+
+      <div class="analysis-findings">
+        <h3>What we found</h3>
+        <ul>
+          <li>
+            <strong>PM2.5 Shows Strong Correlation with Vulnerable Populations</strong><br>
+            Counties with high breast cancer mortality are disproportionately exposed to elevated PM2.5 levels. Texas leads with 14 counties facing both risks, followed by Indiana (12), Washington (11), and Ohio (11). This pattern is concentrated in industrial corridors and urban centers.
+          </li>
+          <li>
+            <strong>NO₂ Impact is Limited and Urban-Focused</strong><br>
+            Only 3 states show overlap between NO₂ exposure and breast cancer mortality (Texas: 6, Georgia: 1, California: 1). This stark difference reflects NO₂'s primary source—traffic emissions—which creates a clear urban-rural divide in exposure patterns.
+          </li>
+          <li>
+            <strong>Geographic Inequity Reveals Structural Problems</strong><br>
+            The overlap isn't random. High-risk counties cluster in petrochemical regions (Texas Gulf Coast), manufacturing hubs (Midwest), and areas with poor air quality infrastructure. Communities already dealing with cancer are systematically exposed to worse environmental conditions.
+          </li>
+          <li>
+            <strong>PM2.5's Broader Sources Make It a Greater Threat</strong><br>
+            Unlike NO₂, PM2.5 comes from multiple sources: industrial emissions, wildfires, and vehicle exhaust. This means it affects both urban and rural populations, making it harder to avoid and creating widespread exposure for vulnerable groups.
+          </li>
+        </ul>
       </div>
 
       <!-- Tableau Embed -->
