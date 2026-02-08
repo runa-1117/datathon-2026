@@ -177,29 +177,29 @@
   <!-- Machine Learning -->
   <section class="section section--tint" id="ml">
     <div class="container">
-      <h2>K-Means Clustering on County Level Air Quality Profile</h2>
+      <h2>Machine Learning on County Level Air Quality</h2>
 
-      <p class="muted">To uncover hidden patterns in air quality across U.S. counties, we group counties with similar long-term air quality profiles and applied K-Means sampling to reveal potential geographic, climatic, industrial, and natural drivers underlying these patterns.
+      <p class="muted">To uncover hidden patterns in air quality across U.S. counties and identify future air quality risks, we used <a href="https://github.com/Marc0Guo/Datathon-2026/blob/main/high_risk_cluster.ipynb" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">K-means</a> and <a href="https://github.com/Marc0Guo/Datathon-2026/blob/main/extreme_event_early_warning.ipynb" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">XGBoost</a> algorithms to perform cluster analysis on long-term air quality data and predict the most likely air quality conditions in different regions in 2026. We aim to reveal the underlying geographical, climatic, industrial, and natural factors behind these patterns and help policymakers and community leaders identify high-risk areas and prioritize air purification efforts.
       </p>
 
 
       <!-- Method + Model Choice -->
       <div class="ml-text-grid">
         <div class="ml-text-card">
-          <h4>Method</h4>
+          <h4>💡 Key Results</h4>
           <ul class="ml-list">
-            <li>Construct multi-year exposure, and volatility features</li>
-            <li>Validate feature relationships to avoid redundancy</li>
-            <li>Cluster based on long-term air quality behavior</li>
+            <li>Evident based annotation on 4 clusters</li>
+            <li>US Map visualization for cluster analysis</li>
+            <li>2026 Top10% AQI counties prediction 2026</li>
           </ul>
         </div>
 
         <div class="ml-text-card">
-          <h4>Model Choice</h4>
+          <h4> 🎮 Interactive Prediction Tool</h4>
           <ul class="ml-list">
-            <li>K-means chosen for interpretability and stability</li>
-            <li>Elbow & silhouette analysis guide cluster selection</li>
-            <li><strong>K = 4</strong> balances separation and real-world meaning</li>
+            <li>Enter the state and county you are interested in</li>
+            <li>Receive the prediction of 2026 air quality condition</li>
+            <li>Plus the profile and interpretation of  cluster</li>
           </ul>
         </div>
       </div>
@@ -263,9 +263,9 @@
 
       <!-- Finding -->
       <div class="ml-finding">
-        <h3>&#x1F50D; County Cluster Lookup</h3>
+        <h3>🤖 Interactive Lookup</h3>
         <p class="muted">
-          Select a county to see its air quality cluster classification based on long-term pollution patterns.
+          Select a county to see its air quality cluster classification and 2026 risk prediction based on long-term pollution patterns.
         </p>
 
         <div class="cluster-lookup">
@@ -287,38 +287,38 @@
 
           <div id="risk-result" class="risk-result" role="status" aria-live="polite" style="display: none;">
             <div class="risk-result__header">
-              <h4 class="risk-result__title">🎯 2026 Risk Prediction</h4>
+              <h4 class="risk-result__title">🎯 2026 Risk Prediction (Powered by XGBoost)</h4>
             </div>
-            
+
             <div class="risk-metrics">
               <div class="risk-metric">
                 <div class="risk-metric__label">Probability of Risk Flag</div>
                 <div class="risk-metric__value" id="risk-prob">—</div>
               </div>
-              
+
               <div class="risk-metric">
                 <div class="risk-metric__label">Risk Status</div>
                 <div class="risk-metric__badge" id="risk-flag">—</div>
               </div>
             </div>
           </div>
-          
+
           <div id="cluster-result" class="cluster-result" role="status" aria-live="polite" style="display: none;">
             <div class="cluster-result__header">
               <span class="cluster-result__dot"></span>
               <h4 class="cluster-result__title"></h4>
             </div>
-            
+
             <div class="cluster-section">
               <h5 class="cluster-section__title">Profile</h5>
               <ul class="cluster-section__list" id="cluster-profile"></ul>
             </div>
-            
+
             <div class="cluster-section">
               <h5 class="cluster-section__title">Interpretation</h5>
               <ul class="cluster-section__list" id="cluster-interpretation"></ul>
             </div>
-            
+
             <div class="cluster-section">
               <h5 class="cluster-section__title">Real-world Implication</h5>
               <ul class="cluster-section__list" id="cluster-implication"></ul>
@@ -331,7 +331,7 @@
         // Cluster labels and descriptions
         const clusterLabels = {
           0: {
-            name: "Ozone-Dominant",
+            name: "Ozone-Dominant (Powered by K-Means)",
             color: "yellow",
             profile: [
               "High share of ozone-dominated pollution days.",
@@ -349,7 +349,7 @@
             ]
           },
           1: {
-            name: "PM2.5 Chronic",
+            name: "PM2.5 Chronic (Powered by K-Means)",
             color: "orange",
             profile: [
               "<strong>PM2.5</strong> is the dominant pollutant.",
@@ -367,7 +367,7 @@
             ]
           },
           2: {
-            name: "Clean but Spiky (Traffic/Dust)",
+            name: "Clean but Spiky (Traffic/Dust) (Powered by K-Means)",
             color: "green",
             profile: [
               "Highest proportion of good air-quality days.",
@@ -385,7 +385,7 @@
             ]
           },
           3: {
-            name: "High-Burden Mixed",
+            name: "High-Burden Mixed (Powered by K-Means)",
             color: "red",
             profile: [
               "Highest share of unhealthy days.",
@@ -407,7 +407,7 @@
         // Load and parse cluster data
         let countyData = [];
         let riskData = {};
-        
+
         // Load risk prediction data
         fetch('pred_2026.json')
           .then(response => response.json())
@@ -418,7 +418,7 @@
           .catch(error => {
             console.error('Error loading risk data:', error);
           });
-        
+
         fetch('cluster.csv')
           .then(response => response.text())
           .then(csv => {
@@ -459,7 +459,7 @@
           const countySelect = document.getElementById('county-select');
           const clusterResultDiv = document.getElementById('cluster-result');
           const riskResultDiv = document.getElementById('risk-result');
-          
+
           // Reset county dropdown and hide results
           countySelect.innerHTML = '<option value="">Select a county…</option>';
           clusterResultDiv.style.display = 'none';
@@ -495,10 +495,10 @@
           const selectedOption = e.target.options[e.target.selectedIndex];
           const countyName = selectedOption.dataset.countyName;
           const stateName = selectedOption.dataset.stateName;
-          
+
           if (!isNaN(cluster) && clusterLabels[cluster]) {
             const info = clusterLabels[cluster];
-            
+
             // Update cluster result display
             const dot = clusterResultDiv.querySelector('.cluster-result__dot');
             const title = clusterResultDiv.querySelector('.cluster-result__title');
@@ -532,19 +532,19 @@
               li.innerHTML = item;
               implicationList.appendChild(li);
             });
-            
+
             clusterResultDiv.style.display = 'block';
-            
+
             // Display risk prediction data
             if (countyName && stateName) {
               const riskKey = `${stateName.toLowerCase()}__${countyName.toLowerCase().replace(/\s+/g, '')}`;
               const riskInfo = riskData[riskKey];
-              
+
               if (riskInfo) {
                 // Update risk probability
                 const riskProb = (riskInfo.risk_prob * 100).toFixed(1);
                 document.getElementById('risk-prob').textContent = `${riskProb}%`;
-                
+
                 // Update risk flag
                 const riskFlagEl = document.getElementById('risk-flag');
                 if (riskInfo.risk_flag_top10 === 1) {
@@ -552,7 +552,7 @@
                 } else {
                   riskFlagEl.innerHTML = '<span class="risk-badge risk-badge--normal">✓ Normal Risk</span>';
                 }
-                
+
                 riskResultDiv.style.display = 'block';
               } else {
                 console.warn('No risk data found for:', riskKey);

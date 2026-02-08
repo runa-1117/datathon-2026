@@ -718,58 +718,69 @@ code{
 
 /* Risk result card */
 .risk-result{
-  background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
-  border: 2px solid #F59E0B;
+  background: var(--card);
+  border: 2px solid var(--line);
   border-radius: 16px;
-  padding: 20px 24px;
+  padding: 24px 26px;
   margin-bottom: 20px;
   animation: fadeIn 0.4s ease;
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border-left: 5px solid #F59E0B;
 }
 
 .risk-result__header{
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--line);
 }
 
 .risk-result__title{
   margin: 0;
-  font-size: 19px;
+  font-size: 22px;
   font-weight: 800;
-  color: #92400E;
+  color: var(--text);
   letter-spacing: -0.3px;
 }
 
 .risk-metrics{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 20px;
 }
 
 .risk-metric{
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--bg);
   border-radius: 12px;
-  padding: 16px 18px;
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 18px 20px;
+  border: 2px solid var(--line);
+  transition: all 0.2s ease;
+}
+
+.risk-metric:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .risk-metric__label{
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.6px;
-  color: #92400E;
-  margin-bottom: 8px;
+  letter-spacing: 0.8px;
+  color: var(--muted);
+  margin-bottom: 10px;
 }
 
 .risk-metric__value{
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 900;
-  color: #B45309;
+  color: var(--brand);
   line-height: 1;
   font-variant-numeric: tabular-nums;
 }
 
 .risk-metric__badge{
+  display: flex;
+  align-items: center;
   font-size: 15px;
   font-weight: 700;
 }
@@ -777,24 +788,31 @@ code{
 .risk-badge{
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 14px;
-  border-radius: 999px;
-  font-size: 14px;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
+  transition: all 0.2s ease;
+}
+
+.risk-badge:hover{
+  transform: scale(1.05);
 }
 
 .risk-badge--high{
-  background: #FEE2E2;
+  background: linear-gradient(135deg, #FEE2E2 0%, #FECACA 100%);
   color: #991B1B;
   border: 2px solid #EF4444;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2);
 }
 
 .risk-badge--normal{
-  background: #D1FAE5;
+  background: linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 100%);
   color: #065F46;
   border: 2px solid #10B981;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
 }
 
 @media (max-width: 860px){
