@@ -1,2 +1,2 @@
 # datathon-2026
-Air Quality Visualization Dashboard | Datathon 2026
+Datathon 2026

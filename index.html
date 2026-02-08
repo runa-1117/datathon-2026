@@ -60,11 +60,22 @@
         We clustered U.S. counties based on long-term air quality patterns to identify persistent air quality regimes, rather than ranking counties by a single AQI metric.
       </p>
 
+      <!-- ===== Task 1: Regression ===== -->
+      <h3 class="ml-subtitle">Task 1: Predicting Future Air Quality</h3>
+      <p class="muted">
+        Predict <strong>next year's Max AQI or number of Unhealthy Days</strong> for a county using historical data.
+      </p>
+
+      <!-- ===== Task 2: Classification ===== -->
+      <h3 class="ml-subtitle">Task 2: Identifying Pollution Peak Counties</h3>
+      <p class="muted">
+        Predict <strong>which counties will experience the highest pollution peaks</strong> (Max AQI or 90th percentile AQI).
+      </p>
+
       <!-- ===== Task 3: Clustering ===== -->
       <h3 class="ml-subtitle">Task 3: Identifying Air Quality Regimes</h3>
       <p class="muted">
-        We clustered U.S. counties based on <strong>long-term air quality patterns</strong> to identify
-        persistent air quality regimes, rather than ranking counties by a single AQI metric.
+        Cluster counties based on historical air quality patterns to identify <strong>high-risk regions</strong>.
       </p>
 
       <!-- Method + Model Choice -->
@@ -90,7 +101,6 @@
 
       <!-- Results -->
       <div class="ml-grid">
-        <!-- Left: figure -->
         <figure class="ml-figure">
           <h3 class="ml-figure__title">Air Quality Cluster Map</h3>
           <img
@@ -99,7 +109,6 @@
           />
         </figure>
 
-        <!-- Right: legend -->
         <div class="ml-legend">
           <div class="legend-item">
             <span class="dot dot-red"></span>
@@ -145,7 +154,7 @@
         </div>
       </div>
 
-      <!-- Clustering Finding -->
+      <!-- Finding -->
       <div class="ml-finding">
         <h3>Finding</h3>
         <p class="muted">
@@ -155,15 +164,6 @@
           <strong>Ozone-Dominant</strong> areas mainly face seasonal ozone pollution with fewer severe days.
           <strong>Clean but Spiky</strong> counties are usually clean but have short pollution spikes from traffic or dust.
           Gray areas show places with limited EPA monitoring, highlighting gaps in available data.
-        </p>
-      </div>
-
-      <!-- ===== Task 1 Placeholder ===== -->
-      <div class="ml-task-placeholder">
-        <h3 class="ml-subtitle">Task 1: Predictive Modeling (In Progress)</h3>
-        <p class="muted">
-          We will extend this work by predicting future air quality risk
-          (e.g. Max AQI or Unhealthy Days) using historical patterns.
         </p>
       </div>
     </div>
@@ -214,7 +214,7 @@
         <div class="card">
           <h3>Why it matters</h3>
           <p class="muted">
-            [2–4 lines connecting patterns to environmental justice, long-term risk, and who is most exposed.]
+            balabala
           </p>
         </div>
       </div>
@@ -233,7 +233,7 @@
       </ul>
 
       <footer class="footer">
-        <span class="muted">Marco Guo, Amelia Li, Runa He, and Anna Huang • DubsTech Datathon • 2026</span>
+        <span class="muted">Marco Guo, Amelia Li, Runa He and Anna Huang • DubsTech Datathon • 2026</span>
       </footer>
     </div>
   </section>
