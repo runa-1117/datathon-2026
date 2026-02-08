@@ -188,9 +188,9 @@
         <div class="ml-text-card">
           <h4>Method</h4>
           <ul class="ml-list">
-            <li>Construct multi-year exposure, baseline, and volatility features</li>
+            <li>Construct multi-year exposure, and volatility features</li>
             <li>Validate feature relationships to avoid redundancy</li>
-            <li>Cluster counties based on long-term air quality behavior</li>
+            <li>Cluster based on long-term air quality behavior</li>
           </ul>
         </div>
 
@@ -290,17 +290,17 @@
               <span class="cluster-result__dot"></span>
               <h4 class="cluster-result__title"></h4>
             </div>
-            
+
             <div class="cluster-section">
               <h5 class="cluster-section__title">Profile</h5>
               <ul class="cluster-section__list" id="cluster-profile"></ul>
             </div>
-            
+
             <div class="cluster-section">
               <h5 class="cluster-section__title">Interpretation</h5>
               <ul class="cluster-section__list" id="cluster-interpretation"></ul>
             </div>
-            
+
             <div class="cluster-section">
               <h5 class="cluster-section__title">Real-world Implication</h5>
               <ul class="cluster-section__list" id="cluster-implication"></ul>
@@ -314,21 +314,8 @@
         const clusterLabels = {
           0: {
             name: "Ozone-Dominant",
-            color: "yellow",
-            profile: [
-              "High share of ozone-dominated pollution days.",
-              "Low contributions from PM2.5, PM10, CO, and NO2.",
-              "Low overall pollution intensity, with relatively low median and peak AQI levels.",
-              "Slightly higher proportion of good air-quality days."
-            ],
-            interpretation: [
-              "Air quality is generally acceptable, but pollution episodes are driven by ozone rather than particulate matter.",
-              "Pollution is mainly driven by photochemical reactions instead of direct emissions."
-            ],
-            implication: [
-              "Common in regions with strong sunlight and warm temperatures.",
-              "Health risk is more related to short-term respiratory irritation during high-ozone periods."
-            ]
+            desc: "High share of ozone-dominated pollution days with low contributions from PM2.5, PM10, CO, and NO2. Low overall pollution intensity with relatively low median and peak AQI levels. Air quality is generally acceptable, but pollution episodes are driven by photochemical reactions rather than direct emissions. Common in regions with strong sunlight and warm temperatures. Health risk is more related to short-term respiratory irritation during high-ozone periods.",
+            color: "yellow"
           },
           1: {
             name: "PM2.5 Chronic",
@@ -393,7 +380,7 @@
           .then(response => response.text())
           .then(csv => {
             const lines = csv.trim().split('\n');
-            
+
             // Skip header and parse all data
             for (let i = 1; i < lines.length; i++) {
               const [, state, county, cluster] = lines[i].split(',');
@@ -405,7 +392,7 @@
                 });
               }
             }
-            
+
             // Populate state dropdown
             const states = [...new Set(countyData.map(d => d.state))].sort();
             const stateSelect = document.getElementById('state-select');
@@ -455,17 +442,17 @@
         document.getElementById('county-select').addEventListener('change', function(e) {
           const cluster = parseInt(e.target.value);
           const resultDiv = document.getElementById('cluster-result');
-          
+
           if (!isNaN(cluster) && clusterLabels[cluster]) {
             const info = clusterLabels[cluster];
-            
+
             // Update result display
             const dot = resultDiv.querySelector('.cluster-result__dot');
             const title = resultDiv.querySelector('.cluster-result__title');
-            
+
             dot.className = `cluster-result__dot dot-${info.color}`;
             title.textContent = info.name;
-            
+
             // Populate profile
             const profileList = document.getElementById('cluster-profile');
             profileList.innerHTML = '';
@@ -474,7 +461,7 @@
               li.innerHTML = item;
               profileList.appendChild(li);
             });
-            
+
             // Populate interpretation
             const interpretationList = document.getElementById('cluster-interpretation');
             interpretationList.innerHTML = '';
@@ -483,7 +470,7 @@
               li.innerHTML = item;
               interpretationList.appendChild(li);
             });
-            
+
             // Populate implication
             const implicationList = document.getElementById('cluster-implication');
             implicationList.innerHTML = '';
@@ -492,7 +479,7 @@
               li.innerHTML = item;
               implicationList.appendChild(li);
             });
-            
+
             resultDiv.style.display = 'block';
           } else {
             resultDiv.style.display = 'none';
