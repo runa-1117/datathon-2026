@@ -177,36 +177,11 @@
   <!-- Machine Learning -->
   <section class="section section--tint" id="ml">
     <div class="container">
-      <h2>Machine Learning</h2>
+      <h2>K-Means Clustering on County Level Air Quality Profile</h2>
 
-      <p class="muted">
-        We use machine learning to both predict future air quality risk and identify long-term air quality patterns across U.S. counties.
-        We clustered U.S. counties based on long-term air quality patterns to identify persistent air quality regimes, rather than ranking counties by a single AQI metric.
+      <p class="muted">To uncover hidden patterns in air quality across U.S. counties, we group counties with similar long-term air quality profiles and applied K-Means sampling to reveal potential geographic, climatic, industrial, and natural drivers underlying these patterns.
       </p>
 
-      <div class="ml-tasks">
-        <div class="ml-task">
-          <span class="ml-task__num">1</span>
-          <div>
-            <h3 class="ml-task__title">Predicting Future Air Quality</h3>
-            <p class="muted">Predict <strong>next year's Max AQI or number of Unhealthy Days</strong> for a county using historical data.</p>
-          </div>
-        </div>
-        <div class="ml-task">
-          <span class="ml-task__num">2</span>
-          <div>
-            <h3 class="ml-task__title">Identifying Pollution Peak Counties</h3>
-            <p class="muted">Predict <strong>which counties will experience the highest pollution peaks</strong> (Max AQI or 90th percentile AQI).</p>
-          </div>
-        </div>
-        <div class="ml-task">
-          <span class="ml-task__num">3</span>
-          <div>
-            <h3 class="ml-task__title">Identifying Air Quality Regimes</h3>
-            <p class="muted">Cluster counties based on historical air quality patterns to identify <strong>high-risk regions</strong>.</p>
-          </div>
-        </div>
-      </div>
 
       <!-- Method + Model Choice -->
       <div class="ml-text-grid">
@@ -236,6 +211,8 @@
           <img
             src="assets/air_quality_cluster_map.png"
             alt="Air Quality Cluster Map"
+            width="1200"
+            height="800"
           />
         </figure>
 
@@ -286,26 +263,161 @@
 
       <!-- Finding -->
       <div class="ml-finding">
-        <h3>&#x1F50D; Finding</h3>
+        <h3>&#x1F50D; County Cluster Lookup</h3>
         <p class="muted">
-          By clustering U.S. counties using long-term air quality data, we found that air pollution risk is more complex than a single AQI score. We identified four main air quality patterns.
-          <strong>High Burden Mixed</strong> areas have the worst overall air quality, often affected by multiple pollution sources and extreme events like wildfires.
-          <strong>PM2.5 Chronic</strong> counties experience steady, long-term pollution, while
-          <strong>Ozone-Dominant</strong> areas mainly face seasonal ozone pollution with fewer severe days.
-          <strong>Clean but Spiky</strong> counties are usually clean but have short pollution spikes from traffic or dust.
-          Gray areas show places with limited EPA monitoring, highlighting gaps in available data.
+          Select a county to see its air quality cluster classification based on long-term pollution patterns.
         </p>
+
+        <div class="cluster-lookup">
+          <div class="cluster-lookup__controls">
+            <div class="form-group">
+              <label for="state-select" class="form-label">State</label>
+              <select id="state-select" name="state" class="form-select" aria-label="Select state">
+                <option value="">Select a state…</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="county-select" class="form-label">County</label>
+              <select id="county-select" name="county" class="form-select" aria-label="Select county" disabled>
+                <option value="">Select a county…</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="cluster-result" class="cluster-result" role="status" aria-live="polite" style="display: none;">
+            <div class="cluster-result__header">
+              <span class="cluster-result__dot"></span>
+              <h4 class="cluster-result__title"></h4>
+            </div>
+            <p class="cluster-result__desc muted"></p>
+          </div>
+        </div>
       </div>
+
+      <script>
+        // Cluster labels and descriptions
+        const clusterLabels = {
+          0: {
+            name: "Ozone-Dominant",
+            desc: "High share of ozone-dominated pollution days with low contributions from PM2.5, PM10, CO, and NO2. Low overall pollution intensity with relatively low median and peak AQI levels. Air quality is generally acceptable, but pollution episodes are driven by photochemical reactions rather than direct emissions. Common in regions with strong sunlight and warm temperatures. Health risk is more related to short-term respiratory irritation during high-ozone periods.",
+            color: "yellow"
+          },
+          1: {
+            name: "PM2.5 Chronic",
+            desc: "PM2.5 is the dominant pollutant with higher share of unhealthy days across the year. Extreme pollution peaks are limited; pollution levels remain consistently elevated, reflecting persistent, long-term exposure rather than short-term events. Often linked to winter inversions, residential burning, or long-lasting regional emissions. Long-term health burden is high, especially for cardiovascular and respiratory outcomes.",
+            color: "orange"
+          },
+          2: {
+            name: "Clean but Spiky (Traffic/Dust)",
+            desc: "Highest proportion of good air-quality days with very low median AQI, but extremely high peak-to-median ratios. Strong signals in NO2, CO, and PM10. Pollution is dominated by rare but severe spikes. Air quality is usually clean, but short-lived pollution events occur driven by episodic sources. Common near highways, urban corridors, or dust-prone regions. Health risks are mainly associated with acute exposure during short pollution episodes.",
+            color: "green"
+          },
+          3: {
+            name: "High-Burden Mixed",
+            desc: "Highest share of unhealthy days with elevated median AQI indicating generally poor air quality. Multiple pollutants contribute simultaneously, including PM2.5, ozone, and NO2. Combines long-term exposure with moderate extreme events, representing structurally poor air quality driven by multiple sources. Often found in dense urban or industrial regions, and wildfire-affected areas. Poses both chronic health risks and heightened vulnerability to extreme pollution events.",
+            color: "red"
+          }
+        };
+
+        // Load and parse cluster data
+        let countyData = [];
+
+        fetch('cluster.csv')
+          .then(response => response.text())
+          .then(csv => {
+            const lines = csv.trim().split('\n');
+            
+            // Skip header and parse all data
+            for (let i = 1; i < lines.length; i++) {
+              const [, state, county, cluster] = lines[i].split(',');
+              if (state && county && cluster !== undefined) {
+                countyData.push({
+                  state: state.trim(),
+                  county: county.trim(),
+                  cluster: parseInt(cluster)
+                });
+              }
+            }
+            
+            // Populate state dropdown
+            const states = [...new Set(countyData.map(d => d.state))].sort();
+            const stateSelect = document.getElementById('state-select');
+            states.forEach(state => {
+              const option = document.createElement('option');
+              option.value = state;
+              option.textContent = state;
+              stateSelect.appendChild(option);
+            });
+          })
+          .catch(error => {
+            console.error('Error loading cluster data:', error);
+            alert('Failed to load cluster data. Please make sure you are running this page through a web server.');
+          });
+
+        // Handle state selection
+        document.getElementById('state-select').addEventListener('change', function(e) {
+          const selectedState = e.target.value;
+          const countySelect = document.getElementById('county-select');
+          const resultDiv = document.getElementById('cluster-result');
+
+          // Reset county dropdown
+          countySelect.innerHTML = '<option value="">Select a county…</option>';
+          resultDiv.style.display = 'none';
+
+          if (selectedState) {
+            // Filter counties by state
+            const counties = countyData
+              .filter(d => d.state === selectedState)
+              .map(d => ({ name: d.county, cluster: d.cluster }))
+              .sort((a, b) => a.name.localeCompare(b.name));
+
+            counties.forEach(county => {
+              const option = document.createElement('option');
+              option.value = county.cluster;
+              option.textContent = county.name;
+              countySelect.appendChild(option);
+            });
+
+            countySelect.disabled = false;
+          } else {
+            countySelect.disabled = true;
+          }
+        });
+
+        // Handle county selection
+        document.getElementById('county-select').addEventListener('change', function(e) {
+          const cluster = parseInt(e.target.value);
+          const resultDiv = document.getElementById('cluster-result');
+
+          if (!isNaN(cluster) && clusterLabels[cluster]) {
+            const info = clusterLabels[cluster];
+
+            // Update result display
+            const dot = resultDiv.querySelector('.cluster-result__dot');
+            const title = resultDiv.querySelector('.cluster-result__title');
+            const desc = resultDiv.querySelector('.cluster-result__desc');
+
+            dot.className = `cluster-result__dot dot-${info.color}`;
+            title.textContent = info.name;
+            desc.textContent = info.desc;
+
+            resultDiv.style.display = 'block';
+          } else {
+            resultDiv.style.display = 'none';
+          }
+        });
+      </script>
     </div>
   </section>
 
-  <!-- Links -->    
+  <!-- Links -->
   <section class="section section--footer" id="links">
     <div class="container">
       <h2>Project Resources</h2>
       <ul class="links">
-        <li><a href="https://drive.google.com/drive/u/0/folders/1e-E_GUNo2w_4CTxRWZUdz8_r0qKi5bW5" target="_blank" rel="noreferrer">📁 Google Drive Folder</a></li>
-        <li><a href="https://github.com/Marc0Guo/Datathon-2026" target="_blank" rel="noreferrer">💻 GitHub Repository</a></li>
+        <li><a href="https://drive.google.com/drive/u/0/folders/1e-E_GUNo2w_4CTxRWZUdz8_r0qKi5bW5" target="_blank" rel="noopener noreferrer">📁 Google Drive Folder</a></li>
+        <li><a href="https://github.com/Marc0Guo/Datathon-2026" target="_blank" rel="noopener noreferrer">💻 GitHub Repository</a></li>
       </ul>
 
       <footer class="footer">

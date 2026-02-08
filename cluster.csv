@@ -1,0 +1,1148 @@
+,State,County,cluster
+0,Alabama,Baldwin,0
+1,Alabama,Clay,0
+2,Alabama,Colbert,0
+3,Alabama,Cullman,0
+4,Alabama,DeKalb,0
+5,Alabama,Elmore,0
+6,Alabama,Etowah,1
+7,Alabama,Geneva,0
+8,Alabama,Houston,0
+9,Alabama,Jefferson,3
+10,Alabama,Lawrence,3
+11,Alabama,Madison,0
+12,Alabama,Mobile,0
+13,Alabama,Montgomery,3
+14,Alabama,Morgan,1
+15,Alabama,Russell,1
+16,Alabama,Shelby,0
+17,Alabama,Sumter,0
+18,Alabama,Talladega,0
+19,Alabama,Tuscaloosa,1
+20,Alaska,Anchorage ,2
+21,Alaska,Denali ,0
+22,Alaska,Fairbanks North Star ,3
+23,Alaska,Juneau ,2
+24,Alaska,Kenai Peninsula ,2
+25,Alaska,Matanuska-Susitna ,1
+26,Alaska,Sitka ,2
+27,Arizona,Apache,2
+28,Arizona,Cochise,0
+29,Arizona,Coconino,0
+30,Arizona,Gila,3
+31,Arizona,Greenlee,0
+32,Arizona,La Paz,0
+33,Arizona,Maricopa,3
+34,Arizona,Mohave,2
+35,Arizona,Navajo,0
+36,Arizona,Pima,3
+37,Arizona,Pinal,3
+38,Arizona,Santa Cruz,1
+39,Arizona,Yavapai,0
+40,Arizona,Yuma,3
+41,Arkansas,Clark,0
+42,Arkansas,Crittenden,0
+43,Arkansas,Montgomery,0
+44,Arkansas,Newton,0
+45,Arkansas,Polk,0
+46,Arkansas,Pulaski,3
+47,Arkansas,Union,1
+48,Arkansas,Washington,0
+49,California,Alameda,3
+50,California,Amador,0
+51,California,Butte,3
+52,California,Calaveras,3
+53,California,Colusa,3
+54,California,Contra Costa,3
+55,California,Del Norte,1
+56,California,El Dorado,3
+57,California,Fresno,3
+58,California,Glenn,0
+59,California,Humboldt,0
+60,California,Imperial,3
+61,California,Inyo,3
+62,California,Kern,3
+63,California,Kings,3
+64,California,Lake,0
+65,California,Los Angeles,3
+66,California,Madera,3
+67,California,Marin,1
+68,California,Mariposa,3
+69,California,Mendocino,0
+70,California,Merced,3
+71,California,Mono,3
+72,California,Monterey,0
+73,California,Napa,0
+74,California,Nevada,3
+75,California,Orange,3
+76,California,Placer,3
+77,California,Plumas,3
+78,California,Riverside,3
+79,California,Sacramento,3
+80,California,San Benito,0
+81,California,San Bernardino,3
+82,California,San Diego,3
+83,California,San Francisco,1
+84,California,San Joaquin,3
+85,California,San Luis Obispo,3
+86,California,San Mateo,0
+87,California,Santa Barbara,3
+88,California,Santa Clara,3
+89,California,Santa Cruz,0
+90,California,Shasta,0
+91,California,Siskiyou,0
+92,California,Solano,0
+93,California,Sonoma,0
+94,California,Stanislaus,3
+95,California,Sutter,3
+96,California,Tehama,0
+97,California,Trinity,1
+98,California,Tulare,3
+99,California,Tuolumne,0
+100,California,Ventura,3
+101,California,Yolo,0
+102,Colorado,Adams,3
+103,Colorado,Alamosa,2
+104,Colorado,Arapahoe,0
+105,Colorado,Archuleta,2
+106,Colorado,Boulder,0
+107,Colorado,Clear Creek,0
+108,Colorado,Delta,2
+109,Colorado,Denver,3
+110,Colorado,Douglas,0
+111,Colorado,El Paso,0
+112,Colorado,Fremont,2
+113,Colorado,Garfield,0
+114,Colorado,Gilpin,0
+115,Colorado,Gunnison,0
+116,Colorado,Jackson,0
+117,Colorado,Jefferson,0
+118,Colorado,La Plata,0
+119,Colorado,Larimer,0
+120,Colorado,Mesa,0
+121,Colorado,Moffat,0
+122,Colorado,Montezuma,0
+123,Colorado,Montrose,0
+124,Colorado,Park,0
+125,Colorado,Pitkin,2
+126,Colorado,Prowers,2
+127,Colorado,Pueblo,2
+128,Colorado,Rio Blanco,0
+129,Colorado,Routt,2
+130,Colorado,San Miguel,2
+131,Colorado,Summit,2
+132,Colorado,Teller,2
+133,Colorado,Weld,0
+134,Connecticut,Fairfield,3
+135,Connecticut,Hartford,3
+136,Connecticut,Litchfield,0
+137,Connecticut,Middlesex,3
+138,Connecticut,New Haven,3
+139,Connecticut,New London,3
+140,Connecticut,Tolland,3
+141,Connecticut,Windham,0
+142,Delaware,Kent,3
+143,Delaware,New Castle,3
+144,Delaware,Sussex,3
+145,District Of Columbia,District of Columbia,3
+146,Florida,Alachua,1
+147,Florida,Baker,0
+148,Florida,Bay,1
+149,Florida,Brevard,0
+150,Florida,Broward,1
+151,Florida,Citrus,1
+152,Florida,Collier,1
+153,Florida,Columbia,1
+154,Florida,Duval,3
+155,Florida,Escambia,3
+156,Florida,Flagler,0
+157,Florida,Hamilton,1
+158,Florida,Highlands,0
+159,Florida,Hillsborough,3
+160,Florida,Holmes,1
+161,Florida,Indian River,0
+162,Florida,Lake,0
+163,Florida,Lee,0
+164,Florida,Leon,1
+165,Florida,Liberty,0
+166,Florida,Manatee,0
+167,Florida,Marion,1
+168,Florida,Martin,1
+169,Florida,Miami-Dade,3
+170,Florida,Nassau,1
+171,Florida,Okaloosa,0
+172,Florida,Orange,0
+173,Florida,Osceola,0
+174,Florida,Palm Beach,0
+175,Florida,Pasco,0
+176,Florida,Pinellas,3
+177,Florida,Polk,0
+178,Florida,Putnam,2
+179,Florida,Santa Rosa,1
+180,Florida,Sarasota,1
+181,Florida,Seminole,0
+182,Florida,St. Johns,0
+183,Florida,St. Lucie,0
+184,Florida,Volusia,0
+185,Florida,Wakulla,0
+186,Georgia,Bibb,1
+187,Georgia,Chatham,1
+188,Georgia,Chattooga,0
+189,Georgia,Cherokee,0
+190,Georgia,Clarke,1
+191,Georgia,Cobb,1
+192,Georgia,Columbia,0
+193,Georgia,Coweta,1
+194,Georgia,Dawson,0
+195,Georgia,DeKalb,3
+196,Georgia,Dougherty,1
+197,Georgia,Douglas,0
+198,Georgia,Fannin,0
+199,Georgia,Fayette,3
+200,Georgia,Floyd,1
+201,Georgia,Fulton,3
+202,Georgia,Glynn,0
+203,Georgia,Gwinnett,3
+204,Georgia,Hall,1
+205,Georgia,Henry,1
+206,Georgia,Houston,1
+207,Georgia,Lowndes,1
+208,Georgia,McIntosh,0
+209,Georgia,Murray,0
+210,Georgia,Muscogee,3
+211,Georgia,Paulding,3
+212,Georgia,Pike,0
+213,Georgia,Richmond,3
+214,Georgia,Rockdale,3
+215,Georgia,Sumter,0
+216,Georgia,Walker,1
+217,Georgia,Walton,1
+218,Georgia,Washington,1
+219,Hawaii,Hawaii,1
+220,Hawaii,Honolulu,0
+221,Hawaii,Kauai,2
+222,Hawaii,Maui,2
+223,Idaho,Ada,3
+224,Idaho,Bannock,1
+225,Idaho,Benewah,1
+226,Idaho,Blaine,1
+227,Idaho,Boise,1
+228,Idaho,Bonner,2
+229,Idaho,Bonneville,1
+230,Idaho,Butte,0
+231,Idaho,Canyon,1
+232,Idaho,Elmore,0
+233,Idaho,Franklin,1
+234,Idaho,Idaho,1
+235,Idaho,Jerome,1
+236,Idaho,Kootenai,1
+237,Idaho,Latah,1
+238,Idaho,Lemhi,1
+239,Idaho,Nez Perce,1
+240,Idaho,Power,3
+241,Idaho,Shoshone,1
+242,Idaho,Twin Falls,1
+243,Idaho,Valley,1
+244,Illinois,Adams,0
+245,Illinois,Champaign,0
+246,Illinois,Clark,0
+247,Illinois,Cook,3
+248,Illinois,DuPage,0
+249,Illinois,Effingham,0
+250,Illinois,Hamilton,0
+251,Illinois,Jersey,0
+252,Illinois,Jo Daviess,0
+253,Illinois,Kane,0
+254,Illinois,Kankakee,0
+255,Illinois,La Salle,2
+256,Illinois,Lake,0
+257,Illinois,Livingston,0
+258,Illinois,Logan,0
+259,Illinois,Macon,0
+260,Illinois,Macoupin,0
+261,Illinois,Madison,3
+262,Illinois,McHenry,0
+263,Illinois,McLean,0
+264,Illinois,Monroe,0
+265,Illinois,Peoria,0
+266,Illinois,Randolph,0
+267,Illinois,Rock Island,0
+268,Illinois,Saint Clair,3
+269,Illinois,Sangamon,0
+270,Illinois,Will,0
+271,Illinois,Williamson,0
+272,Illinois,Winnebago,0
+273,Indiana,Allen,3
+274,Indiana,Bartholomew,1
+275,Indiana,Boone,0
+276,Indiana,Brown,0
+277,Indiana,Carroll,0
+278,Indiana,Clark,3
+279,Indiana,DeKalb,2
+280,Indiana,Delaware,0
+281,Indiana,Dubois,1
+282,Indiana,Elkhart,1
+283,Indiana,Floyd,3
+284,Indiana,Gibson,0
+285,Indiana,Greene,0
+286,Indiana,Hamilton,1
+287,Indiana,Hancock,3
+288,Indiana,Hendricks,0
+289,Indiana,Henry,1
+290,Indiana,Howard,1
+291,Indiana,Huntington,0
+292,Indiana,Jackson,0
+293,Indiana,Jasper,2
+294,Indiana,Jefferson,2
+295,Indiana,Knox,0
+296,Indiana,LaPorte,0
+297,Indiana,Lake,3
+298,Indiana,Madison,3
+299,Indiana,Marion,3
+300,Indiana,Monroe,1
+301,Indiana,Morgan,0
+302,Indiana,Perry,0
+303,Indiana,Porter,3
+304,Indiana,Posey,0
+305,Indiana,Shelby,0
+306,Indiana,Spencer,2
+307,Indiana,St. Joseph,3
+308,Indiana,Sullivan,2
+309,Indiana,Tippecanoe,1
+310,Indiana,Vanderburgh,3
+311,Indiana,Vigo,3
+312,Indiana,Wabash,0
+313,Indiana,Warrick,0
+314,Indiana,Wayne,2
+315,Indiana,Whitley,1
+316,Iowa,Black Hawk,1
+317,Iowa,Bremer,0
+318,Iowa,Cerro Gordo,2
+319,Iowa,Clinton,1
+320,Iowa,Dubuque,2
+321,Iowa,Harrison,0
+322,Iowa,Johnson,1
+323,Iowa,Linn,1
+324,Iowa,Madison,0
+325,Iowa,Montgomery,1
+326,Iowa,Muscatine,1
+327,Iowa,Palo Alto,1
+328,Iowa,Polk,1
+329,Iowa,Pottawattamie,2
+330,Iowa,Scott,3
+331,Iowa,Story,0
+332,Iowa,Van Buren,1
+333,Iowa,Warren,0
+334,Iowa,Woodbury,0
+335,Kansas,Douglas,0
+336,Kansas,Ford,2
+337,Kansas,Jefferson,0
+338,Kansas,Johnson,0
+339,Kansas,Leavenworth,0
+340,Kansas,Linn,0
+341,Kansas,Montgomery,2
+342,Kansas,Neosho,0
+343,Kansas,Riley,0
+344,Kansas,Sedgwick,0
+345,Kansas,Shawnee,0
+346,Kansas,Sherman,2
+347,Kansas,Sumner,0
+348,Kansas,Trego,0
+349,Kansas,Wyandotte,3
+350,Kentucky,Bell,0
+351,Kentucky,Boone,0
+352,Kentucky,Boyd,3
+353,Kentucky,Bullitt,0
+354,Kentucky,Campbell,3
+355,Kentucky,Carter,0
+356,Kentucky,Christian,0
+357,Kentucky,Daviess,3
+358,Kentucky,Edmonson,0
+359,Kentucky,Fayette,3
+360,Kentucky,Graves,0
+361,Kentucky,Greenup,0
+362,Kentucky,Hancock,0
+363,Kentucky,Hardin,1
+364,Kentucky,Henderson,3
+365,Kentucky,Jefferson,3
+366,Kentucky,Jessamine,0
+367,Kentucky,Kenton,3
+368,Kentucky,Lawrence,0
+369,Kentucky,Livingston,0
+370,Kentucky,McCracken,3
+371,Kentucky,McLean,0
+372,Kentucky,Morgan,0
+373,Kentucky,Muhlenberg,0
+374,Kentucky,Ohio,1
+375,Kentucky,Oldham,0
+376,Kentucky,Perry,0
+377,Kentucky,Pike,1
+378,Kentucky,Pulaski,0
+379,Kentucky,Scott,0
+380,Kentucky,Simpson,0
+381,Kentucky,Trigg,0
+382,Kentucky,Trimble,2
+383,Kentucky,Warren,1
+384,Kentucky,Washington,0
+385,Louisiana,Ascension,0
+386,Louisiana,Beauregard,0
+387,Louisiana,Bossier,0
+388,Louisiana,Caddo,0
+389,Louisiana,Calcasieu,3
+390,Louisiana,East Baton Rouge,3
+391,Louisiana,Grant,0
+392,Louisiana,Iberville,0
+393,Louisiana,Jefferson,3
+394,Louisiana,Lafayette,0
+395,Louisiana,Lafourche,0
+396,Louisiana,Livingston,1
+397,Louisiana,Orleans,1
+398,Louisiana,Ouachita,0
+399,Louisiana,Pointe Coupee,0
+400,Louisiana,Rapides,1
+401,Louisiana,St. Bernard,0
+402,Louisiana,St. Charles,0
+403,Louisiana,St. James,0
+404,Louisiana,St. John the Baptist,0
+405,Louisiana,St. Martin,0
+406,Louisiana,St. Mary,0
+407,Louisiana,St. Tammany,1
+408,Louisiana,West Baton Rouge,3
+409,Maine,Androscoggin,1
+410,Maine,Aroostook,0
+411,Maine,Cumberland,0
+412,Maine,Franklin,2
+413,Maine,Hancock,0
+414,Maine,Kennebec,0
+415,Maine,Knox,0
+416,Maine,Oxford,0
+417,Maine,Penobscot,0
+418,Maine,Piscataquis,0
+419,Maine,Sagadahoc,0
+420,Maine,Somerset,0
+421,Maine,Washington,0
+422,Maine,York,0
+423,Maryland,Allegany,0
+424,Maryland,Anne Arundel,3
+425,Maryland,Baltimore,3
+426,Maryland,Baltimore (City),3
+427,Maryland,Calvert,0
+428,Maryland,Carroll,0
+429,Maryland,Cecil,3
+430,Maryland,Charles,0
+431,Maryland,Dorchester,0
+432,Maryland,Frederick,0
+433,Maryland,Garrett,0
+434,Maryland,Harford,3
+435,Maryland,Howard,1
+436,Maryland,Kent,3
+437,Maryland,Montgomery,3
+438,Maryland,Prince George's,3
+439,Maryland,Washington,0
+440,Massachusetts,Barnstable,0
+441,Massachusetts,Berkshire,1
+442,Massachusetts,Bristol,3
+443,Massachusetts,Dukes,0
+444,Massachusetts,Essex,3
+445,Massachusetts,Franklin,1
+446,Massachusetts,Hampden,3
+447,Massachusetts,Hampshire,0
+448,Massachusetts,Middlesex,0
+449,Massachusetts,Norfolk,0
+450,Massachusetts,Plymouth,0
+451,Massachusetts,Suffolk,3
+452,Massachusetts,Worcester,3
+453,Michigan,Allegan,3
+454,Michigan,Bay,1
+455,Michigan,Benzie,0
+456,Michigan,Berrien,0
+457,Michigan,Cass,0
+458,Michigan,Chippewa,1
+459,Michigan,Clinton,0
+460,Michigan,Dickinson,0
+461,Michigan,Genesee,0
+462,Michigan,Gratiot,2
+463,Michigan,Huron,0
+464,Michigan,Ingham,0
+465,Michigan,Kalamazoo,1
+466,Michigan,Kent,3
+467,Michigan,Lenawee,1
+468,Michigan,Macomb,3
+469,Michigan,Manistee,0
+470,Michigan,Marquette,0
+471,Michigan,Mason,0
+472,Michigan,Midland,2
+473,Michigan,Missaukee,0
+474,Michigan,Muskegon,3
+475,Michigan,Oakland,0
+476,Michigan,Ottawa,3
+477,Michigan,Saginaw,2
+478,Michigan,Schoolcraft,0
+479,Michigan,St. Clair,3
+480,Michigan,Tuscola,0
+481,Michigan,Van Buren,2
+482,Michigan,Washtenaw,0
+483,Michigan,Wayne,3
+484,Michigan,Wexford,0
+485,Minnesota,Anoka,0
+486,Minnesota,Becker,1
+487,Minnesota,Beltrami,1
+488,Minnesota,Carlton,0
+489,Minnesota,Cass,1
+490,Minnesota,Cook,1
+491,Minnesota,Crow Wing,1
+492,Minnesota,Dakota,1
+493,Minnesota,Goodhue,0
+494,Minnesota,Hennepin,1
+495,Minnesota,Koochiching,0
+496,Minnesota,Lake,0
+497,Minnesota,Lyon,1
+498,Minnesota,Mille Lacs,0
+499,Minnesota,Olmsted,1
+500,Minnesota,Ramsey,1
+501,Minnesota,Saint Louis,1
+502,Minnesota,Scott,0
+503,Minnesota,Sherburne,2
+504,Minnesota,Stearns,1
+505,Minnesota,Washington,0
+506,Minnesota,Wright,1
+507,Mississippi,Adams,0
+508,Mississippi,Bolivar,1
+509,Mississippi,DeSoto,3
+510,Mississippi,Forrest,1
+511,Mississippi,Franklin,0
+512,Mississippi,Hancock,0
+513,Mississippi,Harrison,1
+514,Mississippi,Hinds,1
+515,Mississippi,Jackson,0
+516,Mississippi,Lamar,0
+517,Mississippi,Lauderdale,0
+518,Mississippi,Lee,0
+519,Mississippi,Madison,0
+520,Mississippi,Sharkey,0
+521,Mississippi,Warren,0
+522,Mississippi,Yalobusha,0
+523,Missouri,Andrew,0
+524,Missouri,Boone,0
+525,Missouri,Buchanan,1
+526,Missouri,Callaway,0
+527,Missouri,Cass,0
+528,Missouri,Cedar,1
+529,Missouri,Clay,3
+530,Missouri,Clinton,0
+531,Missouri,Greene,0
+532,Missouri,Jackson,1
+533,Missouri,Jasper,2
+534,Missouri,Jefferson,3
+535,Missouri,Lincoln,0
+536,Missouri,Madison,0
+537,Missouri,Monroe,0
+538,Missouri,Perry,0
+539,Missouri,Platte,0
+540,Missouri,Saint Charles,3
+541,Missouri,Saint Louis,3
+542,Missouri,Sainte Genevieve,0
+543,Missouri,St. Louis City,3
+544,Missouri,Taney,0
+545,Montana,Broadwater,2
+546,Montana,Cascade,2
+547,Montana,Custer,0
+548,Montana,Fergus,0
+549,Montana,Flathead,0
+550,Montana,Gallatin,1
+551,Montana,Lake,2
+552,Montana,Lewis and Clark,2
+553,Montana,Lincoln,1
+554,Montana,Missoula,3
+555,Montana,Phillips,0
+556,Montana,Powder River,0
+557,Montana,Ravalli,1
+558,Montana,Richland,0
+559,Montana,Rosebud,2
+560,Montana,Sanders,2
+561,Montana,Silver Bow,2
+562,Montana,Yellowstone,2
+563,Nebraska,Cass,2
+564,Nebraska,Douglas,1
+565,Nebraska,Gage,1
+566,Nebraska,Hall,1
+567,Nebraska,Knox,0
+568,Nebraska,Lancaster,0
+569,Nebraska,Sarpy,1
+570,Nebraska,Scotts Bluff,1
+571,Nebraska,Washington,1
+572,Nevada,Carson City,0
+573,Nevada,Churchill,0
+574,Nevada,Clark,3
+575,Nevada,Douglas,0
+576,Nevada,Elko,2
+577,Nevada,Lander,2
+578,Nevada,Lyon,0
+579,Nevada,Mineral,2
+580,Nevada,Nye,2
+581,Nevada,Washoe,3
+582,Nevada,White Pine,0
+583,New Hampshire,Belknap,0
+584,New Hampshire,Cheshire,0
+585,New Hampshire,Coos,0
+586,New Hampshire,Grafton,0
+587,New Hampshire,Hillsborough,3
+588,New Hampshire,Merrimack,0
+589,New Hampshire,Rockingham,0
+590,New Hampshire,Strafford,0
+591,New Hampshire,Sullivan,0
+592,New Jersey,Atlantic,3
+593,New Jersey,Bergen,3
+594,New Jersey,Burlington,2
+595,New Jersey,Camden,3
+596,New Jersey,Cape May,3
+597,New Jersey,Cumberland,0
+598,New Jersey,Essex,3
+599,New Jersey,Gloucester,3
+600,New Jersey,Hudson,3
+601,New Jersey,Hunterdon,3
+602,New Jersey,Mercer,3
+603,New Jersey,Middlesex,3
+604,New Jersey,Monmouth,0
+605,New Jersey,Morris,3
+606,New Jersey,Ocean,3
+607,New Jersey,Passaic,0
+608,New Jersey,Somerset,3
+609,New Jersey,Union,3
+610,New Jersey,Warren,1
+611,New Mexico,Bernalillo,3
+612,New Mexico,Dona Ana,3
+613,New Mexico,Eddy,0
+614,New Mexico,Grant,0
+615,New Mexico,Lea,0
+616,New Mexico,Los Alamos,0
+617,New Mexico,Luna,2
+618,New Mexico,McKinley,2
+619,New Mexico,Rio Arriba,0
+620,New Mexico,San Juan,0
+621,New Mexico,Sandoval,0
+622,New Mexico,Santa Fe,2
+623,New Mexico,Taos,2
+624,New Mexico,Valencia,0
+625,New York,Albany,0
+626,New York,Bronx,3
+627,New York,Broome,0
+628,New York,Chautauqua,0
+629,New York,Chemung,0
+630,New York,Dutchess,0
+631,New York,Erie,3
+632,New York,Essex,0
+633,New York,Franklin,2
+634,New York,Hamilton,0
+635,New York,Herkimer,0
+636,New York,Jefferson,0
+637,New York,Kings,1
+638,New York,Madison,0
+639,New York,Monroe,0
+640,New York,Nassau,1
+641,New York,New York,3
+642,New York,Niagara,0
+643,New York,Oneida,0
+644,New York,Onondaga,0
+645,New York,Orange,1
+646,New York,Oswego,0
+647,New York,Putnam,0
+648,New York,Queens,3
+649,New York,Rensselaer,0
+650,New York,Richmond,3
+651,New York,Rockland,0
+652,New York,Saratoga,0
+653,New York,Schenectady,0
+654,New York,Steuben,1
+655,New York,Suffolk,0
+656,New York,Tompkins,0
+657,New York,Ulster,0
+658,New York,Warren,0
+659,New York,Wayne,0
+660,New York,Westchester,0
+661,North Carolina,Alamance,1
+662,North Carolina,Alexander,0
+663,North Carolina,Avery,0
+664,North Carolina,Buncombe,1
+665,North Carolina,Burke,0
+666,North Carolina,Caldwell,0
+667,North Carolina,Camden,0
+668,North Carolina,Carteret,0
+669,North Carolina,Caswell,0
+670,North Carolina,Catawba,1
+671,North Carolina,Chatham,0
+672,North Carolina,Cumberland,3
+673,North Carolina,Davidson,1
+674,North Carolina,Davie,3
+675,North Carolina,Duplin,3
+676,North Carolina,Durham,3
+677,North Carolina,Edgecombe,0
+678,North Carolina,Forsyth,3
+679,North Carolina,Franklin,0
+680,North Carolina,Gaston,1
+681,North Carolina,Graham,0
+682,North Carolina,Granville,0
+683,North Carolina,Guilford,3
+684,North Carolina,Haywood,3
+685,North Carolina,Jackson,3
+686,North Carolina,Johnston,0
+687,North Carolina,Jones,0
+688,North Carolina,Lee,1
+689,North Carolina,Lenoir,0
+690,North Carolina,Lincoln,0
+691,North Carolina,Macon,0
+692,North Carolina,Martin,0
+693,North Carolina,McDowell,1
+694,North Carolina,Mecklenburg,3
+695,North Carolina,Mitchell,1
+696,North Carolina,Montgomery,0
+697,North Carolina,New Hanover,0
+698,North Carolina,Northampton,1
+699,North Carolina,Person,0
+700,North Carolina,Pitt,0
+701,North Carolina,Randolph,0
+702,North Carolina,Rockingham,0
+703,North Carolina,Rowan,3
+704,North Carolina,Swain,1
+705,North Carolina,Union,0
+706,North Carolina,Wake,3
+707,North Carolina,Wayne,1
+708,North Carolina,Yancey,0
+709,North Dakota,Billings,0
+710,North Dakota,Burke,0
+711,North Dakota,Burleigh,0
+712,North Dakota,Cass,0
+713,North Dakota,Dunn,0
+714,North Dakota,McKenzie,0
+715,North Dakota,Mercer,0
+716,North Dakota,Oliver,0
+717,North Dakota,Steele,0
+718,North Dakota,Stutsman,2
+719,North Dakota,Ward,0
+720,North Dakota,Williams,0
+721,Ohio,Adams,1
+722,Ohio,Allen,0
+723,Ohio,Ashtabula,0
+724,Ohio,Athens,1
+725,Ohio,Belmont,2
+726,Ohio,Butler,3
+727,Ohio,Clark,3
+728,Ohio,Clermont,3
+729,Ohio,Clinton,0
+730,Ohio,Columbiana,2
+731,Ohio,Crawford,0
+732,Ohio,Cuyahoga,3
+733,Ohio,Delaware,0
+734,Ohio,Fayette,0
+735,Ohio,Franklin,3
+736,Ohio,Geauga,0
+737,Ohio,Greene,0
+738,Ohio,Hamilton,3
+739,Ohio,Harrison,2
+740,Ohio,Jefferson,3
+741,Ohio,Knox,0
+742,Ohio,Lake,3
+743,Ohio,Lawrence,3
+744,Ohio,Licking,0
+745,Ohio,Logan,3
+746,Ohio,Lorain,0
+747,Ohio,Lucas,3
+748,Ohio,Madison,0
+749,Ohio,Mahoning,3
+750,Ohio,Medina,0
+751,Ohio,Miami,0
+752,Ohio,Montgomery,3
+753,Ohio,Noble,0
+754,Ohio,Pickaway,2
+755,Ohio,Portage,0
+756,Ohio,Preble,0
+757,Ohio,Scioto,2
+758,Ohio,Stark,3
+759,Ohio,Summit,3
+760,Ohio,Trumbull,3
+761,Ohio,Union,0
+762,Ohio,Warren,3
+763,Ohio,Washington,0
+764,Ohio,Wood,0
+765,Oklahoma,Adair,0
+766,Oklahoma,Bryan,0
+767,Oklahoma,Caddo,0
+768,Oklahoma,Canadian,0
+769,Oklahoma,Carter,1
+770,Oklahoma,Cherokee,0
+771,Oklahoma,Choctaw,0
+772,Oklahoma,Cleveland,0
+773,Oklahoma,Comanche,0
+774,Oklahoma,Cotton,0
+775,Oklahoma,Creek,0
+776,Oklahoma,Custer,2
+777,Oklahoma,Dewey,0
+778,Oklahoma,Garfield,2
+779,Oklahoma,Jefferson,0
+780,Oklahoma,Johnston,0
+781,Oklahoma,Kay,1
+782,Oklahoma,Kiowa,0
+783,Oklahoma,Latimer,0
+784,Oklahoma,Lincoln,0
+785,Oklahoma,Love,0
+786,Oklahoma,Marshall,0
+787,Oklahoma,Mayes,0
+788,Oklahoma,McClain,0
+789,Oklahoma,McCurtain,0
+790,Oklahoma,Muskogee,2
+791,Oklahoma,Nowata,1
+792,Oklahoma,Oklahoma,3
+793,Oklahoma,Osage,0
+794,Oklahoma,Ottawa,1
+795,Oklahoma,Pittsburg,1
+796,Oklahoma,Sequoyah,0
+797,Oklahoma,Tulsa,3
+798,Oklahoma,Washington,1
+799,Oregon,Baker,1
+800,Oregon,Benton,1
+801,Oregon,Clackamas,0
+802,Oregon,Columbia,1
+803,Oregon,Crook,1
+804,Oregon,Deschutes,1
+805,Oregon,Douglas,1
+806,Oregon,Grant,1
+807,Oregon,Harney,1
+808,Oregon,Jackson,3
+809,Oregon,Jefferson,1
+810,Oregon,Josephine,1
+811,Oregon,Klamath,1
+812,Oregon,Lake,1
+813,Oregon,Lane,3
+814,Oregon,Linn,1
+815,Oregon,Marion,1
+816,Oregon,Multnomah,1
+817,Oregon,Umatilla,1
+818,Oregon,Union,1
+819,Oregon,Wallowa,1
+820,Oregon,Wasco,1
+821,Oregon,Washington,1
+822,Pennsylvania,Adams,3
+823,Pennsylvania,Allegheny,3
+824,Pennsylvania,Armstrong,3
+825,Pennsylvania,Beaver,3
+826,Pennsylvania,Berks,3
+827,Pennsylvania,Blair,0
+828,Pennsylvania,Bradford,0
+829,Pennsylvania,Bucks,3
+830,Pennsylvania,Cambria,3
+831,Pennsylvania,Centre,3
+832,Pennsylvania,Chester,3
+833,Pennsylvania,Clearfield,0
+834,Pennsylvania,Cumberland,1
+835,Pennsylvania,Dauphin,3
+836,Pennsylvania,Delaware,3
+837,Pennsylvania,Elk,0
+838,Pennsylvania,Erie,3
+839,Pennsylvania,Fayette,1
+840,Pennsylvania,Franklin,0
+841,Pennsylvania,Greene,0
+842,Pennsylvania,Indiana,0
+843,Pennsylvania,Lackawanna,3
+844,Pennsylvania,Lancaster,3
+845,Pennsylvania,Lawrence,0
+846,Pennsylvania,Lebanon,1
+847,Pennsylvania,Lehigh,3
+848,Pennsylvania,Luzerne,0
+849,Pennsylvania,Lycoming,0
+850,Pennsylvania,Mercer,3
+851,Pennsylvania,Monroe,0
+852,Pennsylvania,Montgomery,3
+853,Pennsylvania,Northampton,3
+854,Pennsylvania,Perry,0
+855,Pennsylvania,Philadelphia,3
+856,Pennsylvania,Schuylkill,2
+857,Pennsylvania,Somerset,0
+858,Pennsylvania,Susquehanna,1
+859,Pennsylvania,Tioga,0
+860,Pennsylvania,Washington,3
+861,Pennsylvania,Westmoreland,3
+862,Pennsylvania,Wyoming,1
+863,Pennsylvania,York,3
+864,Puerto Rico,Bayamon,2
+865,Puerto Rico,Caguas,2
+866,Puerto Rico,Catano,2
+867,Puerto Rico,Fajardo,2
+868,Puerto Rico,Guaynabo,2
+869,Puerto Rico,Juncos,2
+870,Puerto Rico,Mayagnez,1
+871,Puerto Rico,Ponce,2
+872,Puerto Rico,San Juan,2
+873,Puerto Rico,Toa Baja,0
+874,Rhode Island,Kent,0
+875,Rhode Island,Providence,3
+876,Rhode Island,Washington,0
+877,South Carolina,Abbeville,0
+878,South Carolina,Aiken,0
+879,South Carolina,Anderson,0
+880,South Carolina,Barnwell,0
+881,South Carolina,Berkeley,0
+882,South Carolina,Charleston,1
+883,South Carolina,Cherokee,0
+884,South Carolina,Chester,0
+885,South Carolina,Chesterfield,1
+886,South Carolina,Colleton,0
+887,South Carolina,Darlington,0
+888,South Carolina,Edgefield,0
+889,South Carolina,Florence,1
+890,South Carolina,Georgetown,2
+891,South Carolina,Greenville,1
+892,South Carolina,Horry,0
+893,South Carolina,Lexington,1
+894,South Carolina,Oconee,0
+895,South Carolina,Pickens,0
+896,South Carolina,Richland,3
+897,South Carolina,Spartanburg,3
+898,South Carolina,Union,0
+899,South Carolina,Williamsburg,0
+900,South Carolina,York,0
+901,South Dakota,Brookings,0
+902,South Dakota,Brown,1
+903,South Dakota,Clay,0
+904,South Dakota,Codington,1
+905,South Dakota,Custer,0
+906,South Dakota,Hughes,2
+907,South Dakota,Jackson,0
+908,South Dakota,Meade,0
+909,South Dakota,Minnehaha,0
+910,South Dakota,Pennington,2
+911,South Dakota,Union,1
+912,Tennessee,Anderson,0
+913,Tennessee,Blount,3
+914,Tennessee,Bradley,2
+915,Tennessee,Claiborne,0
+916,Tennessee,Coffee,0
+917,Tennessee,Davidson,3
+918,Tennessee,DeKalb,0
+919,Tennessee,Dickson,3
+920,Tennessee,Dyer,1
+921,Tennessee,Giles,0
+922,Tennessee,Hamblen,0
+923,Tennessee,Hamilton,3
+924,Tennessee,Haywood,3
+925,Tennessee,Jefferson,0
+926,Tennessee,Knox,3
+927,Tennessee,Lawrence,1
+928,Tennessee,Loudon,0
+929,Tennessee,Madison,1
+930,Tennessee,Maury,1
+931,Tennessee,McMinn,2
+932,Tennessee,Meigs,0
+933,Tennessee,Montgomery,1
+934,Tennessee,Putnam,1
+935,Tennessee,Roane,1
+936,Tennessee,Rutherford,0
+937,Tennessee,Sevier,0
+938,Tennessee,Shelby,3
+939,Tennessee,Sullivan,3
+940,Tennessee,Sumner,3
+941,Tennessee,Union,2
+942,Tennessee,Williamson,0
+943,Tennessee,Wilson,0
+944,Texas,Atascosa,1
+945,Texas,Bell,0
+946,Texas,Bexar,3
+947,Texas,Bowie,1
+948,Texas,Brazoria,0
+949,Texas,Brazos,1
+950,Texas,Brewster,0
+951,Texas,Cameron,1
+952,Texas,Chambers,3
+953,Texas,Collin,0
+954,Texas,Culberson,0
+955,Texas,Dallas,3
+956,Texas,Denton,3
+957,Texas,Ector,1
+958,Texas,El Paso,3
+959,Texas,Ellis,0
+960,Texas,Fayette,1
+961,Texas,Galveston,3
+962,Texas,Gregg,0
+963,Texas,Hardin,0
+964,Texas,Harris,3
+965,Texas,Harrison,1
+966,Texas,Hays,0
+967,Texas,Hidalgo,1
+968,Texas,Hood,0
+969,Texas,Hunt,0
+970,Texas,Jeff Davis,1
+971,Texas,Jefferson,3
+972,Texas,Johnson,0
+973,Texas,Karnes,2
+974,Texas,Kaufman,1
+975,Texas,Kleberg,1
+976,Texas,Lubbock,1
+977,Texas,Marion,0
+978,Texas,Maverick,1
+979,Texas,McLennan,1
+980,Texas,Montgomery,3
+981,Texas,Navarro,1
+982,Texas,Nueces,0
+983,Texas,Orange,3
+984,Texas,Parker,0
+985,Texas,Polk,0
+986,Texas,Potter,1
+987,Texas,Randall,0
+988,Texas,Rockwall,0
+989,Texas,Smith,0
+990,Texas,Tarrant,3
+991,Texas,Travis,3
+992,Texas,Tyler,0
+993,Texas,Victoria,0
+994,Texas,Webb,1
+995,Texas,Wichita,1
+996,Texas,Wilson,2
+997,Utah,Box Elder,0
+998,Utah,Cache,3
+999,Utah,Carbon,0
+1000,Utah,Davis,3
+1001,Utah,Duchesne,0
+1002,Utah,Garfield,0
+1003,Utah,Grand,0
+1004,Utah,Iron,0
+1005,Utah,Salt Lake,3
+1006,Utah,San Juan,0
+1007,Utah,Tooele,0
+1008,Utah,Uintah,3
+1009,Utah,Utah,3
+1010,Utah,Washington,0
+1011,Utah,Weber,3
+1012,Vermont,Addison,0
+1013,Vermont,Bennington,0
+1014,Vermont,Chittenden,0
+1015,Vermont,Rutland,1
+1016,Virginia,Albemarle,1
+1017,Virginia,Alexandria City,3
+1018,Virginia,Arlington,3
+1019,Virginia,Augusta,0
+1020,Virginia,Caroline,0
+1021,Virginia,Charles,0
+1022,Virginia,Chesapeake City,1
+1023,Virginia,Chesterfield,0
+1024,Virginia,Fairfax,3
+1025,Virginia,Fairfax City,3
+1026,Virginia,Fauquier,0
+1027,Virginia,Frederick,0
+1028,Virginia,Giles,0
+1029,Virginia,Hampton City,0
+1030,Virginia,Hanover,0
+1031,Virginia,Henrico,3
+1032,Virginia,Loudoun,0
+1033,Virginia,Madison,0
+1034,Virginia,Newport News City,2
+1035,Virginia,Norfolk City,2
+1036,Virginia,Northampton,3
+1037,Virginia,Page,0
+1038,Virginia,Prince Edward,0
+1039,Virginia,Prince William,0
+1040,Virginia,Richmond City,1
+1041,Virginia,Roanoke,0
+1042,Virginia,Roanoke City,2
+1043,Virginia,Rockbridge,0
+1044,Virginia,Rockingham,0
+1045,Virginia,Salem City,2
+1046,Virginia,Stafford,0
+1047,Virginia,Suffolk City,0
+1048,Virginia,Virginia Beach City,1
+1049,Virginia,Warren,3
+1050,Virginia,Wythe,0
+1051,Washington,Adams,1
+1052,Washington,Asotin,1
+1053,Washington,Benton,2
+1054,Washington,Chelan,1
+1055,Washington,Clallam,0
+1056,Washington,Clark,1
+1057,Washington,Columbia,1
+1058,Washington,Cowlitz,1
+1059,Washington,Franklin,1
+1060,Washington,Garfield,1
+1061,Washington,Grant,1
+1062,Washington,Grays Harbor,1
+1063,Washington,Jefferson,1
+1064,Washington,King,3
+1065,Washington,Kitsap,1
+1066,Washington,Kittitas,1
+1067,Washington,Klickitat,0
+1068,Washington,Lewis,1
+1069,Washington,Mason,1
+1070,Washington,Okanogan,1
+1071,Washington,Pend Oreille,1
+1072,Washington,Pierce,3
+1073,Washington,Skagit,0
+1074,Washington,Snohomish,1
+1075,Washington,Spokane,3
+1076,Washington,Stevens,1
+1077,Washington,Thurston,1
+1078,Washington,Walla Walla,1
+1079,Washington,Whatcom,1
+1080,Washington,Whitman,1
+1081,Washington,Yakima,1
+1082,West Virginia,Berkeley,0
+1083,West Virginia,Brooke,2
+1084,West Virginia,Cabell,3
+1085,West Virginia,Gilmer,0
+1086,West Virginia,Greenbrier,0
+1087,West Virginia,Hancock,0
+1088,West Virginia,Kanawha,3
+1089,West Virginia,Marshall,1
+1090,West Virginia,Monongalia,0
+1091,West Virginia,Ohio,0
+1092,West Virginia,Tucker,0
+1093,West Virginia,Wayne,2
+1094,West Virginia,Wood,0
+1095,Wisconsin,Ashland,0
+1096,Wisconsin,Brown,0
+1097,Wisconsin,Buffalo,2
+1098,Wisconsin,Columbia,0
+1099,Wisconsin,Dane,0
+1100,Wisconsin,Dodge,0
+1101,Wisconsin,Door,0
+1102,Wisconsin,Eau Claire,1
+1103,Wisconsin,Florence,0
+1104,Wisconsin,Forest,0
+1105,Wisconsin,Grant,1
+1106,Wisconsin,Jackson,1
+1107,Wisconsin,Jefferson,0
+1108,Wisconsin,Kenosha,3
+1109,Wisconsin,Kewaunee,0
+1110,Wisconsin,La Crosse,1
+1111,Wisconsin,Manitowoc,0
+1112,Wisconsin,Marathon,0
+1113,Wisconsin,Milwaukee,3
+1114,Wisconsin,Monroe,1
+1115,Wisconsin,Outagamie,1
+1116,Wisconsin,Ozaukee,3
+1117,Wisconsin,Polk,2
+1118,Wisconsin,Racine,3
+1119,Wisconsin,Rock,0
+1120,Wisconsin,Sauk,0
+1121,Wisconsin,Sheboygan,0
+1122,Wisconsin,St. Croix,0
+1123,Wisconsin,Taylor,0
+1124,Wisconsin,Vernon,0
+1125,Wisconsin,Vilas,0
+1126,Wisconsin,Walworth,0
+1127,Wisconsin,Waukesha,1
+1128,Wisconsin,Winnebago,3
+1129,Wyoming,Albany,0
+1130,Wyoming,Big Horn,0
+1131,Wyoming,Campbell,3
+1132,Wyoming,Carbon,0
+1133,Wyoming,Converse,0
+1134,Wyoming,Fremont,0
+1135,Wyoming,Johnson,0
+1136,Wyoming,Laramie,0
+1137,Wyoming,Lincoln,2
+1138,Wyoming,Natrona,0
+1139,Wyoming,Park,1
+1140,Wyoming,Platte,2
+1141,Wyoming,Sheridan,2
+1142,Wyoming,Sublette,0
+1143,Wyoming,Sweetwater,0
+1144,Wyoming,Teton,0
+1145,Wyoming,Uinta,0
+1146,Wyoming,Weston,0

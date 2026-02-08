@@ -573,11 +573,115 @@ code{
   border-top: 1px solid var(--line);
 }
 
+/* Cluster lookup form */
+.cluster-lookup{
+  margin: 24px 0;
+}
+
+.cluster-lookup__controls{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label{
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.form-select{
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23475569' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+}
+
+.form-select:hover:not(:disabled){
+  border-color: var(--brand);
+}
+
+.form-select:focus{
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+}
+
+.form-select:disabled{
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--bg);
+}
+
+.cluster-result{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 20px;
+  border-left: 4px solid var(--brand);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn{
+  from{ opacity: 0; transform: translateY(-10px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+
+.cluster-result__header{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.cluster-result__dot{
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  flex: 0 0 auto;
+  border: 1px solid rgba(0,0,0,0.15);
+}
+
+.cluster-result__title{
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.cluster-result__desc{
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
 @media (max-width: 860px){
   .kpi{ grid-template-columns: 1fr; }
   .grid{ grid-template-columns: 1fr; }
   .ml-grid{ grid-template-columns: 1fr; }
   .ml-text-grid{ grid-template-columns: 1fr; }
+  .cluster-lookup__controls{ grid-template-columns: 1fr; }
   h1{ font-size: 36px; }
   .section--hero{ min-height: auto; padding-top: 100px; padding-bottom: 80px; }
 }
