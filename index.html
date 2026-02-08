@@ -290,7 +290,21 @@
               <span class="cluster-result__dot"></span>
               <h4 class="cluster-result__title"></h4>
             </div>
-            <p class="cluster-result__desc muted"></p>
+            
+            <div class="cluster-section">
+              <h5 class="cluster-section__title">Profile</h5>
+              <ul class="cluster-section__list" id="cluster-profile"></ul>
+            </div>
+            
+            <div class="cluster-section">
+              <h5 class="cluster-section__title">Interpretation</h5>
+              <ul class="cluster-section__list" id="cluster-interpretation"></ul>
+            </div>
+            
+            <div class="cluster-section">
+              <h5 class="cluster-section__title">Real-world Implication</h5>
+              <ul class="cluster-section__list" id="cluster-implication"></ul>
+            </div>
           </div>
         </div>
       </div>
@@ -300,23 +314,75 @@
         const clusterLabels = {
           0: {
             name: "Ozone-Dominant",
-            desc: "High share of ozone-dominated pollution days with low contributions from PM2.5, PM10, CO, and NO2. Low overall pollution intensity with relatively low median and peak AQI levels. Air quality is generally acceptable, but pollution episodes are driven by photochemical reactions rather than direct emissions. Common in regions with strong sunlight and warm temperatures. Health risk is more related to short-term respiratory irritation during high-ozone periods.",
-            color: "yellow"
+            color: "yellow",
+            profile: [
+              "High share of ozone-dominated pollution days.",
+              "Low contributions from PM2.5, PM10, CO, and NO2.",
+              "Low overall pollution intensity, with relatively low median and peak AQI levels.",
+              "Slightly higher proportion of good air-quality days."
+            ],
+            interpretation: [
+              "Air quality is generally acceptable, but pollution episodes are driven by ozone rather than particulate matter.",
+              "Pollution is mainly driven by photochemical reactions instead of direct emissions."
+            ],
+            implication: [
+              "Common in regions with strong sunlight and warm temperatures.",
+              "Health risk is more related to short-term respiratory irritation during high-ozone periods."
+            ]
           },
           1: {
             name: "PM2.5 Chronic",
-            desc: "PM2.5 is the dominant pollutant with higher share of unhealthy days across the year. Extreme pollution peaks are limited; pollution levels remain consistently elevated, reflecting persistent, long-term exposure rather than short-term events. Often linked to winter inversions, residential burning, or long-lasting regional emissions. Long-term health burden is high, especially for cardiovascular and respiratory outcomes.",
-            color: "orange"
+            color: "orange",
+            profile: [
+              "<strong>PM2.5 is the dominant pollutant.</strong>",
+              "Higher share of unhealthy days across the year.",
+              "Extreme pollution peaks are limited; pollution levels remain consistently elevated.",
+              "Reflects persistent, long-term exposure rather than short-term events."
+            ],
+            interpretation: [
+              "Represents chronic background pollution with limited variability.",
+              "Air quality problems are sustained over time rather than driven by rare extremes."
+            ],
+            implication: [
+              "Often linked to winter inversions, residential burning, or long-lasting regional emissions.",
+              "Long-term health burden is high, especially for cardiovascular and respiratory outcomes."
+            ]
           },
           2: {
             name: "Clean but Spiky (Traffic/Dust)",
-            desc: "Highest proportion of good air-quality days with very low median AQI, but extremely high peak-to-median ratios. Strong signals in NO2, CO, and PM10. Pollution is dominated by rare but severe spikes. Air quality is usually clean, but short-lived pollution events occur driven by episodic sources. Common near highways, urban corridors, or dust-prone regions. Health risks are mainly associated with acute exposure during short pollution episodes.",
-            color: "green"
+            color: "green",
+            profile: [
+              "Highest proportion of good air-quality days.",
+              "Very low median AQI, but extremely high peak-to-median ratios.",
+              "Strong signals in NO2, CO, and PM10.",
+              "Pollution is dominated by rare but severe spikes."
+            ],
+            interpretation: [
+              "Air quality is usually clean, but short-lived pollution events occur.",
+              "Variability is driven by episodic sources rather than persistent exposure."
+            ],
+            implication: [
+              "Common near highways, urban corridors, or dust-prone regions.",
+              "Health risks are mainly associated with acute exposure during short pollution episodes."
+            ]
           },
           3: {
             name: "High-Burden Mixed",
-            desc: "Highest share of unhealthy days with elevated median AQI indicating generally poor air quality. Multiple pollutants contribute simultaneously, including PM2.5, ozone, and NO2. Combines long-term exposure with moderate extreme events, representing structurally poor air quality driven by multiple sources. Often found in dense urban or industrial regions, and wildfire-affected areas. Poses both chronic health risks and heightened vulnerability to extreme pollution events.",
-            color: "red"
+            color: "red",
+            profile: [
+              "Highest share of unhealthy days.",
+              "Elevated median AQI indicates generally poor air quality.",
+              "Multiple pollutants contribute simultaneously, including PM2.5, ozone, and NO2.",
+              "Combines long-term exposure with moderate extreme events."
+            ],
+            interpretation: [
+              "Represents structurally poor air quality driven by multiple sources.",
+              "Pollution is both persistent and periodically intensified."
+            ],
+            implication: [
+              "Often found in dense urban or industrial regions, and wildfire-affected areas.",
+              "Poses both chronic health risks and heightened vulnerability to extreme pollution events."
+            ]
           }
         };
 
@@ -389,19 +455,44 @@
         document.getElementById('county-select').addEventListener('change', function(e) {
           const cluster = parseInt(e.target.value);
           const resultDiv = document.getElementById('cluster-result');
-
+          
           if (!isNaN(cluster) && clusterLabels[cluster]) {
             const info = clusterLabels[cluster];
-
+            
             // Update result display
             const dot = resultDiv.querySelector('.cluster-result__dot');
             const title = resultDiv.querySelector('.cluster-result__title');
-            const desc = resultDiv.querySelector('.cluster-result__desc');
-
+            
             dot.className = `cluster-result__dot dot-${info.color}`;
             title.textContent = info.name;
-            desc.textContent = info.desc;
-
+            
+            // Populate profile
+            const profileList = document.getElementById('cluster-profile');
+            profileList.innerHTML = '';
+            info.profile.forEach(item => {
+              const li = document.createElement('li');
+              li.innerHTML = item;
+              profileList.appendChild(li);
+            });
+            
+            // Populate interpretation
+            const interpretationList = document.getElementById('cluster-interpretation');
+            interpretationList.innerHTML = '';
+            info.interpretation.forEach(item => {
+              const li = document.createElement('li');
+              li.innerHTML = item;
+              interpretationList.appendChild(li);
+            });
+            
+            // Populate implication
+            const implicationList = document.getElementById('cluster-implication');
+            implicationList.innerHTML = '';
+            info.implication.forEach(item => {
+              const li = document.createElement('li');
+              li.innerHTML = item;
+              implicationList.appendChild(li);
+            });
+            
             resultDiv.style.display = 'block';
           } else {
             resultDiv.style.display = 'none';
