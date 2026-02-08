@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Access to a Livable Planet | Datathon 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Top bar (minimal) -->
+  <header class="top">
+    <div class="container top__inner">
+      <div class="top__title"> 7th DubsTech Datathon </div>
+      <nav class="top__nav">
+        <a href="#top">Home</a>
+        <a href="#ml">Machine Learning</a>
+        <a href="#viz">Visualization</a>
+        <a href="#analysis">Analysis</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Overview -->
+  <section class="section section--hero"">
+    <div class="container">
+      <h1>Access to a Livable Planet</h1>
+      <p class="lead">
+        <span class="callout">Who gets clean air, safe water, and a stable future?</span>
+      </p>
+      <p class="muted">
+        This project uses the <strong>EPA Air Quality Index (AQI) by County</strong> dataset to explore environmental access and climate justice.
+        We focus on how air quality varies by <strong>region</strong>, <strong>urbanicity</strong>, and <strong>proximity to industrial areas</strong>.
+      </p>
+
+      <div class="kpi">
+        <div class="kpi__card">
+          <div class="kpi__label">Focus</div>
+          <div class="kpi__value">Machine Learning<br>Data Visualization and Analysis</div>
+        </div>
+        <div class="kpi__card">
+          <div class="kpi__label">Key Metric</div>
+          <div class="kpi__value">Unhealthy Days %</div>
+        </div>
+        <div class="kpi__card">
+          <div class="kpi__label">Outcome</div>
+          <div class="kpi__value">Identify risk & inequity</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Machine Learning -->
+  <section class="section section--tint" id="ml">
+    <div class="container">
+      <h2>Machine Learning</h2>
+
+      <p class="muted">
+        We use machine learning to both predict future air quality risk and identify long-term air quality patterns across U.S. counties.
+        We clustered U.S. counties based on long-term air quality patterns to identify persistent air quality regimes, rather than ranking counties by a single AQI metric.
+      </p>
+
+      <!-- ===== Task 3: Clustering ===== -->
+      <h3 class="ml-subtitle">Task 3: Identifying Air Quality Regimes</h3>
+      <p class="muted">
+        We clustered U.S. counties based on <strong>long-term air quality patterns</strong> to identify
+        persistent air quality regimes, rather than ranking counties by a single AQI metric.
+      </p>
+
+      <!-- Method + Model Choice -->
+      <div class="ml-text-grid">
+        <div class="ml-text-card">
+          <h4>Method</h4>
+          <ul class="ml-list">
+            <li>Construct multi-year exposure, baseline, and volatility features</li>
+            <li>Validate feature relationships to avoid redundancy</li>
+            <li>Cluster counties based on long-term air quality behavior</li>
+          </ul>
+        </div>
+
+        <div class="ml-text-card">
+          <h4>Model Choice</h4>
+          <ul class="ml-list">
+            <li>K-means chosen for interpretability and stability</li>
+            <li>Elbow & silhouette analysis guide cluster selection</li>
+            <li><strong>K = 4</strong> balances separation and real-world meaning</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="ml-grid">
+        <!-- Left: figure -->
+        <figure class="ml-figure">
+          <h3 class="ml-figure__title">Air Quality Cluster Map</h3>
+          <img
+            src="assets/air_quality_cluster_map.png"
+            alt="Air Quality Cluster Map"
+          />
+        </figure>
+
+        <!-- Right: legend -->
+        <div class="ml-legend">
+          <div class="legend-item">
+            <span class="dot dot-red"></span>
+            <div>
+              <div class="legend-title">High Burden Mixed</div>
+              <div class="muted">Worst overall air quality and stronger extreme events.</div>
+            </div>
+          </div>
+
+          <div class="legend-item">
+            <span class="dot dot-orange"></span>
+            <div>
+              <div class="legend-title">PM2.5 Chronic</div>
+              <div class="muted">Steady, long-term particulate pollution.</div>
+            </div>
+          </div>
+
+          <div class="legend-item">
+            <span class="dot dot-yellow"></span>
+            <div>
+              <div class="legend-title">Ozone-Dominant</div>
+              <div class="muted">Seasonal ozone-driven pollution.</div>
+            </div>
+          </div>
+
+          <div class="legend-item">
+            <span class="dot dot-green"></span>
+            <div>
+              <div class="legend-title">Clean but Spiky</div>
+              <div class="muted">Mostly clean air with short pollution spikes.</div>
+            </div>
+          </div>
+
+          <div class="legend-item">
+            <span class="dot dot-gray"></span>
+            <div>
+              <div class="legend-title">Insufficient Monitoring</div>
+              <div class="muted">
+                Counties without sufficient EPA air quality monitoring coverage.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Clustering Finding -->
+      <div class="ml-finding">
+        <h3>Finding</h3>
+        <p class="muted">
+          By clustering U.S. counties using long-term air quality data, we found that air pollution risk is more complex than a single AQI score. We identified four main air quality patterns.
+          <strong>High Burden Mixed</strong> areas have the worst overall air quality, often affected by multiple pollution sources and extreme events like wildfires.
+          <strong>PM2.5 Chronic</strong> counties experience steady, long-term pollution, while
+          <strong>Ozone-Dominant</strong> areas mainly face seasonal ozone pollution with fewer severe days.
+          <strong>Clean but Spiky</strong> counties are usually clean but have short pollution spikes from traffic or dust.
+          Gray areas show places with limited EPA monitoring, highlighting gaps in available data.
+        </p>
+      </div>
+
+      <!-- ===== Task 1 Placeholder ===== -->
+      <div class="ml-task-placeholder">
+        <h3 class="ml-subtitle">Task 1: Predictive Modeling (In Progress)</h3>
+        <p class="muted">
+          We will extend this work by predicting future air quality risk
+          (e.g. Max AQI or Unhealthy Days) using historical patterns.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Visualization -->
+  <section class="section" id="viz">
+    <div class="container">
+      <h2>Visualization</h2>
+      <p class="muted">
+        [1–2 sentences: what users should look for in the dashboard + how to interact (filters).]
+      </p>
+
+      <!-- Tableau Embed Placeholder -->
+      <div class="viz">
+        <div class="viz__placeholder">
+          <p><strong>[Tableau dashboard goes here]</strong></p>
+          <p class="muted">Replace this block with the Tableau iframe when ready.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Analysis -->
+  <section class="section section--tint" id="analysis">
+    <div class="container">
+      <h2>Analysis</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Question</h3>
+          <p class="muted">
+            How does air quality vary by <strong>region</strong>, <strong>urbanicity</strong>, or <strong>proximity to industrial areas</strong>?
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>What we found</h3>
+          <ul>
+            <li>[Finding #1: region pattern, quantified]</li>
+            <li>[Finding #2: urban vs rural pattern]</li>
+            <li>[Finding #3: industrial proximity / pollutant-specific pattern]</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Why it matters</h3>
+          <p class="muted">
+            [2–4 lines connecting patterns to environmental justice, long-term risk, and who is most exposed.]
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Links -->    
+  <section class="section section--footer" id="links">
+    <div class="container">
+      <h2>Project Resources</h2>
+      <ul class="links">
+        <li><a href="https://drive.google.com/drive/u/0/folders/1e-E_GUNo2w_4CTxRWZUdz8_r0qKi5bW5" target="_blank" rel="noreferrer">📁 Drive Folder</a></li>
+        <li><a href="https://github.com/Marc0Guo/Datathon-2026" target="_blank" rel="noreferrer">💻 GitHub Repository</a></li>
+        <li><a href="[Tableau Public URL]" target="_blank" rel="noreferrer">📈 Tableau Public Dashboard</a></li>
+      </ul>
+
+      <footer class="footer">
+        <span class="muted">Marco Guo, Amelia Li, Runa He, and Anna Huang • DubsTech Datathon • 2026</span>
+      </footer>
+    </div>
+  </section>
+</body>
+</html>
