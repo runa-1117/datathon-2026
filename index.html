@@ -285,22 +285,40 @@
             </div>
           </div>
 
+          <div id="risk-result" class="risk-result" role="status" aria-live="polite" style="display: none;">
+            <div class="risk-result__header">
+              <h4 class="risk-result__title">🎯 2026 Risk Prediction</h4>
+            </div>
+            
+            <div class="risk-metrics">
+              <div class="risk-metric">
+                <div class="risk-metric__label">Probability of Risk Flag</div>
+                <div class="risk-metric__value" id="risk-prob">—</div>
+              </div>
+              
+              <div class="risk-metric">
+                <div class="risk-metric__label">Risk Status</div>
+                <div class="risk-metric__badge" id="risk-flag">—</div>
+              </div>
+            </div>
+          </div>
+          
           <div id="cluster-result" class="cluster-result" role="status" aria-live="polite" style="display: none;">
             <div class="cluster-result__header">
               <span class="cluster-result__dot"></span>
               <h4 class="cluster-result__title"></h4>
             </div>
-
+            
             <div class="cluster-section">
               <h5 class="cluster-section__title">Profile</h5>
               <ul class="cluster-section__list" id="cluster-profile"></ul>
             </div>
-
+            
             <div class="cluster-section">
               <h5 class="cluster-section__title">Interpretation</h5>
               <ul class="cluster-section__list" id="cluster-interpretation"></ul>
             </div>
-
+            
             <div class="cluster-section">
               <h5 class="cluster-section__title">Real-world Implication</h5>
               <ul class="cluster-section__list" id="cluster-implication"></ul>
@@ -388,7 +406,19 @@
 
         // Load and parse cluster data
         let countyData = [];
-
+        let riskData = {};
+        
+        // Load risk prediction data
+        fetch('pred_2026.json')
+          .then(response => response.json())
+          .then(data => {
+            riskData = data;
+            console.log('Risk data loaded:', Object.keys(riskData).length, 'counties');
+          })
+          .catch(error => {
+            console.error('Error loading risk data:', error);
+          });
+        
         fetch('cluster.csv')
           .then(response => response.text())
           .then(csv => {
@@ -427,11 +457,13 @@
         document.getElementById('state-select').addEventListener('change', function(e) {
           const selectedState = e.target.value;
           const countySelect = document.getElementById('county-select');
-          const resultDiv = document.getElementById('cluster-result');
-
-          // Reset county dropdown
+          const clusterResultDiv = document.getElementById('cluster-result');
+          const riskResultDiv = document.getElementById('risk-result');
+          
+          // Reset county dropdown and hide results
           countySelect.innerHTML = '<option value="">Select a county…</option>';
-          resultDiv.style.display = 'none';
+          clusterResultDiv.style.display = 'none';
+          riskResultDiv.style.display = 'none';
 
           if (selectedState) {
             // Filter counties by state
@@ -444,6 +476,8 @@
               const option = document.createElement('option');
               option.value = county.cluster;
               option.textContent = county.name;
+              option.dataset.countyName = county.name;
+              option.dataset.stateName = selectedState;
               countySelect.appendChild(option);
             });
 
@@ -456,14 +490,18 @@
         // Handle county selection
         document.getElementById('county-select').addEventListener('change', function(e) {
           const cluster = parseInt(e.target.value);
-          const resultDiv = document.getElementById('cluster-result');
-
+          const clusterResultDiv = document.getElementById('cluster-result');
+          const riskResultDiv = document.getElementById('risk-result');
+          const selectedOption = e.target.options[e.target.selectedIndex];
+          const countyName = selectedOption.dataset.countyName;
+          const stateName = selectedOption.dataset.stateName;
+          
           if (!isNaN(cluster) && clusterLabels[cluster]) {
             const info = clusterLabels[cluster];
-
-            // Update result display
-            const dot = resultDiv.querySelector('.cluster-result__dot');
-            const title = resultDiv.querySelector('.cluster-result__title');
+            
+            // Update cluster result display
+            const dot = clusterResultDiv.querySelector('.cluster-result__dot');
+            const title = clusterResultDiv.querySelector('.cluster-result__title');
 
             dot.className = `cluster-result__dot dot-${info.color}`;
             title.textContent = info.name;
@@ -494,10 +532,36 @@
               li.innerHTML = item;
               implicationList.appendChild(li);
             });
-
-            resultDiv.style.display = 'block';
+            
+            clusterResultDiv.style.display = 'block';
+            
+            // Display risk prediction data
+            if (countyName && stateName) {
+              const riskKey = `${stateName.toLowerCase()}__${countyName.toLowerCase().replace(/\s+/g, '')}`;
+              const riskInfo = riskData[riskKey];
+              
+              if (riskInfo) {
+                // Update risk probability
+                const riskProb = (riskInfo.risk_prob * 100).toFixed(1);
+                document.getElementById('risk-prob').textContent = `${riskProb}%`;
+                
+                // Update risk flag
+                const riskFlagEl = document.getElementById('risk-flag');
+                if (riskInfo.risk_flag_top10 === 1) {
+                  riskFlagEl.innerHTML = '<span class="risk-badge risk-badge--high">🚩 High Risk (Top 10%)</span>';
+                } else {
+                  riskFlagEl.innerHTML = '<span class="risk-badge risk-badge--normal">✓ Normal Risk</span>';
+                }
+                
+                riskResultDiv.style.display = 'block';
+              } else {
+                console.warn('No risk data found for:', riskKey);
+                riskResultDiv.style.display = 'none';
+              }
+            }
           } else {
-            resultDiv.style.display = 'none';
+            clusterResultDiv.style.display = 'none';
+            riskResultDiv.style.display = 'none';
           }
         });
       </script>
