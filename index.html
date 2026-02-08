@@ -22,30 +22,38 @@
   </header>
 
   <!-- Overview -->
-  <section class="section section--hero"">
-    <div class="container">
-      <h1>Access to a Livable Planet</h1>
+  <section class="section section--hero" id="top">
+    <div class="container hero-content">
+      <div class="hero-badge">DubsTech Datathon 2026</div>
+      <h1>Access to a <span class="hero-accent">Livable Planet</span></h1>
       <p class="lead">
         <span class="callout">Who gets clean air, safe water, and a stable future?</span>
       </p>
-      <p class="muted">
-        This project uses the <strong>EPA Air Quality Index (AQI) by County</strong> dataset to explore environmental access and climate justice.
-        We focus on how air quality varies by <strong>region</strong>, <strong>urbanicity</strong>, and <strong>proximity to industrial areas</strong>.
+      <p class="hero-desc">
+        Using EPA AQI data, we apply machine learning and data visualization to uncover hidden air quality risk patterns across U.S. counties.
       </p>
 
       <div class="kpi">
-        <div class="kpi__card">
-          <div class="kpi__label">Focus</div>
-          <div class="kpi__value">Machine Learning<br>Data Visualization and Analysis</div>
+        <div class="kpi__card kpi__card--problem">
+          <div class="kpi__icon">&#x26A0;</div>
+          <div class="kpi__label">Problem</div>
+          <div class="kpi__value">Unequal exposure to unhealthy air across U.S. communities</div>
         </div>
-        <div class="kpi__card">
-          <div class="kpi__label">Key Metric</div>
-          <div class="kpi__value">Unhealthy Days %</div>
+        <div class="kpi__card kpi__card--approach">
+          <div class="kpi__icon">&#x2699;</div>
+          <div class="kpi__label">Approach</div>
+          <div class="kpi__value">Machine learning + Data visualizations</div>
         </div>
-        <div class="kpi__card">
+        <div class="kpi__card kpi__card--outcome">
+          <div class="kpi__icon">&#x1F4CD;</div>
           <div class="kpi__label">Outcome</div>
-          <div class="kpi__value">Identify risk & inequity</div>
+          <div class="kpi__value">Identify high-risk regions and pollution regimes</div>
         </div>
+      </div>
+
+      <div class="scroll-hint">
+        <span class="scroll-hint__text">Scroll to explore</span>
+        <div class="scroll-hint__arrow">&#8595;</div>
       </div>
     </div>
   </section>
@@ -60,23 +68,29 @@
         We clustered U.S. counties based on long-term air quality patterns to identify persistent air quality regimes, rather than ranking counties by a single AQI metric.
       </p>
 
-      <!-- ===== Task 1: Regression ===== -->
-      <h3 class="ml-subtitle">Task 1: Predicting Future Air Quality</h3>
-      <p class="muted">
-        Predict <strong>next year's Max AQI or number of Unhealthy Days</strong> for a county using historical data.
-      </p>
-
-      <!-- ===== Task 2: Classification ===== -->
-      <h3 class="ml-subtitle">Task 2: Identifying Pollution Peak Counties</h3>
-      <p class="muted">
-        Predict <strong>which counties will experience the highest pollution peaks</strong> (Max AQI or 90th percentile AQI).
-      </p>
-
-      <!-- ===== Task 3: Clustering ===== -->
-      <h3 class="ml-subtitle">Task 3: Identifying Air Quality Regimes</h3>
-      <p class="muted">
-        Cluster counties based on historical air quality patterns to identify <strong>high-risk regions</strong>.
-      </p>
+      <div class="ml-tasks">
+        <div class="ml-task">
+          <span class="ml-task__num">1</span>
+          <div>
+            <h3 class="ml-task__title">Predicting Future Air Quality</h3>
+            <p class="muted">Predict <strong>next year's Max AQI or number of Unhealthy Days</strong> for a county using historical data.</p>
+          </div>
+        </div>
+        <div class="ml-task">
+          <span class="ml-task__num">2</span>
+          <div>
+            <h3 class="ml-task__title">Identifying Pollution Peak Counties</h3>
+            <p class="muted">Predict <strong>which counties will experience the highest pollution peaks</strong> (Max AQI or 90th percentile AQI).</p>
+          </div>
+        </div>
+        <div class="ml-task">
+          <span class="ml-task__num">3</span>
+          <div>
+            <h3 class="ml-task__title">Identifying Air Quality Regimes</h3>
+            <p class="muted">Cluster counties based on historical air quality patterns to identify <strong>high-risk regions</strong>.</p>
+          </div>
+        </div>
+      </div>
 
       <!-- Method + Model Choice -->
       <div class="ml-text-grid">
@@ -156,7 +170,7 @@
 
       <!-- Finding -->
       <div class="ml-finding">
-        <h3>Finding</h3>
+        <h3>&#x1F50D; Finding</h3>
         <p class="muted">
           By clustering U.S. counties using long-term air quality data, we found that air pollution risk is more complex than a single AQI score. We identified four main air quality patterns.
           <strong>High Burden Mixed</strong> areas have the worst overall air quality, often affected by multiple pollution sources and extreme events like wildfires.
