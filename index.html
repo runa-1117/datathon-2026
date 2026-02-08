@@ -314,14 +314,27 @@
         const clusterLabels = {
           0: {
             name: "Ozone-Dominant",
-            desc: "High share of ozone-dominated pollution days with low contributions from PM2.5, PM10, CO, and NO2. Low overall pollution intensity with relatively low median and peak AQI levels. Air quality is generally acceptable, but pollution episodes are driven by photochemical reactions rather than direct emissions. Common in regions with strong sunlight and warm temperatures. Health risk is more related to short-term respiratory irritation during high-ozone periods.",
-            color: "yellow"
+            color: "yellow",
+            profile: [
+              "High share of ozone-dominated pollution days.",
+              "Low contributions from PM2.5, PM10, CO, and NO2.",
+              "Low overall pollution intensity, with relatively low median and peak AQI levels.",
+              "Slightly higher proportion of good air-quality days."
+            ],
+            interpretation: [
+              "Air quality is generally acceptable, but pollution episodes are driven by ozone rather than particulate matter.",
+              "Pollution is mainly driven by photochemical reactions instead of direct emissions."
+            ],
+            implication: [
+              "Common in regions with strong sunlight and warm temperatures.",
+              "Health risk is more related to short-term respiratory irritation during high-ozone periods."
+            ]
           },
           1: {
             name: "PM2.5 Chronic",
             color: "orange",
             profile: [
-              "<strong>PM2.5 is the dominant pollutant.</strong>",
+              "<strong>PM2.5</strong> is the dominant pollutant.",
               "Higher share of unhealthy days across the year.",
               "Extreme pollution peaks are limited; pollution levels remain consistently elevated.",
               "Reflects persistent, long-term exposure rather than short-term events."
@@ -405,7 +418,9 @@
           })
           .catch(error => {
             console.error('Error loading cluster data:', error);
-            alert('Failed to load cluster data. Please make sure you are running this page through a web server.');
+            const resultDiv = document.getElementById('cluster-result');
+            resultDiv.innerHTML = '<p style="color: #EF4444; font-weight: 600;">⚠️ Failed to load cluster data. Please run this page through a web server (e.g., <code>python3 -m http.server</code>).</p>';
+            resultDiv.style.display = 'block';
           });
 
         // Handle state selection
